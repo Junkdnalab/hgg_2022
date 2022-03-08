@@ -44,12 +44,16 @@ incomplete grade.
 
 #### Tuesday, March 15 *Bioinformatics* (Hazelett)
 
-**Lecture topics:** Course structure and expectations.
-Availability of course materials. 
-Historical overview of bioinformatics
+**Lecture topics:**
+Introduction
+Course overview
+History of bioinformatics
 Introduction to Unix
 
-**Homework Asssignment I:**
+**slides:** [lecture 01](https://docs.google.com/presentation/d/1b556fkP4JOXSbFrGgs_vyuoOCaFqzJzxdtXENG_U6_4/edit#slide=id.g117cec35c7b_0_0)
+**readings:**
+[Hagen NRG 2000](https://www.nature.com/articles/35042090)
+[Gauthier _et al._, 2018](https://academic.oup.com/bib/article/20/6/1981/5066445)
 
 #### Thursday, March 17 *The Human Genome* (Hazelett)
 
