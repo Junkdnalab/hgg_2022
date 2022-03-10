@@ -76,7 +76,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 4](lecture%204/file_formats.html)
+[Lecture 4](lecture%204/file_formats.md)
 
 **Assignment III:** 
 
