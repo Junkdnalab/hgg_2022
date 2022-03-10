@@ -45,14 +45,10 @@ incomplete grade.
 #### Tuesday, March 15 *Bioinformatics* (Hazelett)
 
 **Lecture topics:**
-
-Introduction
-
-Course overview
-
-History of bioinformatics
-
-Introduction to Unix
+- Introduction
+- Course overview
+- History of bioinformatics
+- Introduction to Unix
 
 **slides:** [lecture 01](https://docs.google.com/presentation/d/1b556fkP4JOXSbFrGgs_vyuoOCaFqzJzxdtXENG_U6_4/edit#slide=id.g117cec35c7b_0_0)
 
@@ -65,10 +61,8 @@ Introduction to Unix
 #### Thursday, March 17 *The Human Genome* (Hazelett)
 
 **Lecture topics:** 
-
-The Human Genome
-
-More basic unix and tour the unix file system
+- The Human Genome
+- More basic unix and tour the unix file system
 
 **Homework Assignment II:** 
 
@@ -102,14 +96,9 @@ More basic unix and tour the unix file system
 #### Tuesday, April 5 *Modeling count data* (Hazelett)
 
 **Lecture topics:** 
-
-Probability, NGS and generative modeling
-
-Gene Ontology (GO) & Pathway Analysis, David,
-
-GoRilla, GENAVI. Gene Set Enrichment Analysis (GSEA) and MSigDB.
-
-Workshop / Homework Review
+- Probability, NGS and generative modeling
+- Gene Ontology (GO) & Pathway Analysis, David,
+- GoRilla, GENAVI. Gene Set Enrichment Analysis (GSEA) and MSigDB.
 
 #### Thursday, April 7 *RNA seq analysis* (Coetzee)
 
