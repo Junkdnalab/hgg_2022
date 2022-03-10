@@ -45,20 +45,29 @@ incomplete grade.
 #### Tuesday, March 15 *Bioinformatics* (Hazelett)
 
 **Lecture topics:**
+
 Introduction
+
 Course overview
+
 History of bioinformatics
+
 Introduction to Unix
 
 **slides:** [lecture 01](https://docs.google.com/presentation/d/1b556fkP4JOXSbFrGgs_vyuoOCaFqzJzxdtXENG_U6_4/edit#slide=id.g117cec35c7b_0_0)
+
 **readings:**
+
 [Hagen NRG 2000](https://www.nature.com/articles/35042090)
+
 [Gauthier _et al._, 2018](https://academic.oup.com/bib/article/20/6/1981/5066445)
 
 #### Thursday, March 17 *The Human Genome* (Hazelett)
 
 **Lecture topics:** 
+
 The Human Genome
+
 More basic unix and tour the unix file system
 
 **Homework Asssignment II:** 
@@ -71,7 +80,9 @@ More basic unix and tour the unix file system
 #### Thursday, March 24 *Simon Coetzee: Unix skills 3: awk, bedtools and formats*
 
 **Lecture topics:** 
+
 File manipulation with Awk
+
 bedtools: the swiss army knife of computational genomics
 
 **Assignment III:** 
@@ -85,7 +96,9 @@ bedtools: the swiss army knife of computational genomics
 #### Thursday, March 31 *Working with data on the command line* (Coetzee)
 
 **Lecture topics:** 
+
 Pattern matching with GREP
+
 Chaining commands
 
 **Assignment IV:** 
@@ -95,7 +108,9 @@ Chaining commands
 **Lecture topics:** 
 
 Probability, NGS and generative modeling
+
 Gene Ontology (GO) & Pathway Analysis, David,
+
 GoRilla, GENAVI. Gene Set Enrichment Analysis (GSEA) and MSigDB.
 
 Workshop / Homework Review
@@ -103,7 +118,9 @@ Workshop / Homework Review
 #### Thursday, April 7 *RNA seq analysis* (Coetzee)
 
 **Lecture topics:** 
+
 Log files from alignment and QC analyses. Structure
+
 and interpretation of NGS file formats ( *e.g.* FASTQ, .sam *etc.*)
 
 **Assignment V:** (Question set)
@@ -119,8 +136,11 @@ Workshop / Homework Review
 #### Tuesday, April 19 *Project management and Git*
 
 **Lecture topics:** 
+
 What is project management?
+
 Git Basics; creating and cloning a repo
+
 Adding, committing, and pull requests
 
 #### Thursday, April 21 *automated machine learning pipelines* Urbanowicz
@@ -143,9 +163,3 @@ Adding, committing, and pull requests
 | Tue | 04/19 | HAZELETT  |      |      |
 | Thu | 04/21 | URBANOWICZ |      |      |
 
-**Course schedule and outline.** Numbered assignments are preceded by ‘L’ for labs, ‘QS’ for question sets and ‘E’ for exams. Optional times for oral presentation are during workshops.
-
-## Course Materials
-
-All course materials, including this syllabus, lab workflows, question
-sets, and lecture slides are available in box or this git repo.
