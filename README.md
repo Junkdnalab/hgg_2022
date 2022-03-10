@@ -73,6 +73,8 @@ incomplete grade.
 **Lecture topics:** 
 - Understanding NGS file formats
 - Understanding NGS quality assessment
+**Lecture slides:**
+[Lecture 4](lecture\ 4/file_formats.html)
 
 **Assignment III:** 
 
