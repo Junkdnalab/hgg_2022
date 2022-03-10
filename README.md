@@ -70,36 +70,32 @@ The Human Genome
 
 More basic unix and tour the unix file system
 
-**Homework Asssignment II:** 
+**Homework Assignment II:** 
 
 #### Tuesday, March 22 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
-
-
-
-#### Thursday, March 24 *Simon Coetzee: Unix skills 3: awk, bedtools and formats*
+#### Thursday, March 24 *Genomics File Formats* (Coetzee)
 
 **Lecture topics:** 
-
-File manipulation with Awk
-
-bedtools: the swiss army knife of computational genomics
+- Understanding NGS file formats
+- Understanding NGS quality assessment
 
 **Assignment III:** 
 
-#### Tuesday, March 29 *Genomics File Formats* (Coetzee)
+#### Tuesday, March 29 *Working with data on the command line: Searching NGS File Formats* (Coetzee)
+
 **Lecture topics:** 
+- Search for characters or patterns in a text file using the grep command
+- Write to and append a file using output redirection
+- Use the pipe `|` character to chain together commands
 
 **Assignment III:** 
 
-
-#### Thursday, March 31 *Working with data on the command line* (Coetzee)
+#### Thursday, March 31  *Working with data on the command line: awk & bedtools - *MORE* Searching NGS File Formats*
 
 **Lecture topics:** 
-
-Pattern matching with GREP
-
-Chaining commands
+- Search for characters or patterns in a column specific manner using awk.
+- Learn to use bedtools to accomplish genome arithmetic.
 
 **Assignment IV:** 
 
@@ -119,9 +115,9 @@ Workshop / Homework Review
 
 **Lecture topics:** 
 
-Log files from alignment and QC analyses. Structure
-
-and interpretation of NGS file formats ( *e.g.* FASTQ, .sam *etc.*)
+- Understanding computational context of RNA-Seq.
+- Learning to judge data for quality metrics of RNA-Seq.
+- Quick differential expression analysis.
 
 **Assignment V:** (Question set)
 
