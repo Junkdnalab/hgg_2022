@@ -76,7 +76,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 4](lecture%204/file_formats.md)
+[Lecture 4](lecture%204/file_formats.html)
 
 **Assignment III:** 
 
@@ -86,6 +86,9 @@ incomplete grade.
 - Search for characters or patterns in a text file using the grep command
 - Write to and append a file using output redirection
 - Use the pipe `|` character to chain together commands
+
+**Lecture slides:**
+[Lecture 5](lecture%205/file_searching.html)
 
 **Assignment III:** 
 
