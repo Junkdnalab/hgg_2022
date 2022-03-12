@@ -88,6 +88,7 @@ incomplete grade.
 - Use the pipe `|` character to chain together commands
 
 **Lecture slides:**
+
 [Lecture 5](lecture%205/file_searching.html)
 
 **Assignment III:** 
