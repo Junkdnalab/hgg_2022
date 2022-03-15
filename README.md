@@ -50,7 +50,9 @@ incomplete grade.
 - History of bioinformatics
 - Introduction to Unix
 
-**slides:** [lecture 01](https://docs.google.com/presentation/d/1b556fkP4JOXSbFrGgs_vyuoOCaFqzJzxdtXENG_U6_4/edit#slide=id.g117cec35c7b_0_0)
+**Lecture slides:** 
+
+[Lecture 01](https://docs.google.com/presentation/d/1b556fkP4JOXSbFrGgs_vyuoOCaFqzJzxdtXENG_U6_4/edit#slide=id.g117cec35c7b_0_0)
 
 **readings:**
 
@@ -76,7 +78,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 4](lecture%204/file_formats.html)
+[Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
 
 **Assignment III:** 
 
@@ -89,7 +91,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 5](lecture%205/file_searching.html)
+[Lecture 05](https://junkdnalab.github.io/hgg_2022/lecture%205/file_searching.html)
 
 **Assignment III:** 
 
