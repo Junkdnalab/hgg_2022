@@ -67,7 +67,8 @@ incomplete grade.
 - More basic unix and tour the unix file system
 
 **Homework Assignment:** 
-[Homework 01](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
+
+[Homework 01](https://junkdnalab.github.io/hgg_2022/homework/hw1.md)
 
 #### Tuesday, March 22 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
@@ -79,7 +80,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 04](https://junkdnalab.github.io/hgg_2022/homework/hw1.md)
+[Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
 
 **Assignment III:** 
 
