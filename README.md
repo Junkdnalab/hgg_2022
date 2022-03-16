@@ -66,7 +66,8 @@ incomplete grade.
 - The Human Genome
 - More basic unix and tour the unix file system
 
-**Homework Assignment II:** 
+**Homework Assignment:** 
+[Homework 01](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
 
 #### Tuesday, March 22 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
@@ -78,7 +79,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
+[Lecture 04](https://junkdnalab.github.io/hgg_2022/homework/hw1.md)
 
 **Assignment III:** 
 
