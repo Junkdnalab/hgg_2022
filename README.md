@@ -66,6 +66,10 @@ incomplete grade.
 - The Human Genome
 - More basic unix and tour the unix file system
 
+**Lecture slides:**
+
+[Lecture 02](https://docs.google.com/presentation/d/14eYAf3q9BrKBg9Rs2n8VaSofpYeTyJmYYExX_RSIAKg/edit?usp=sharing)
+
 **Homework Assignment:** 
 
 
