@@ -68,7 +68,7 @@ incomplete grade.
 
 **Homework Assignment:** 
 
-[Homework 01](https://github.com/Junkdnalab/hgg_2022/homework/hw1.html)
+[Homework 01](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)
 
 #### Tuesday, March 22 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
