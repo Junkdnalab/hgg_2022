@@ -82,7 +82,7 @@ incomplete grade.
 
 [Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
 
-**Assignment III:** 
+**Assignment:** 
 
 #### Tuesday, March 29 *Working with data on the command line: Searching NGS File Formats* (Coetzee)
 
@@ -95,7 +95,7 @@ incomplete grade.
 
 [Lecture 05](https://junkdnalab.github.io/hgg_2022/lecture%205/file_searching.html)
 
-**Assignment III:** 
+**Assignment:** 
 
 #### Thursday, March 31  *Working with data on the command line: awk & bedtools - *MORE* Searching NGS File Formats*
 
@@ -103,7 +103,7 @@ incomplete grade.
 - Search for characters or patterns in a column specific manner using awk.
 - Learn to use bedtools to accomplish genome arithmetic.
 
-**Assignment IV:** 
+**Assignment:** 
 
 #### Tuesday, April 5 *Modeling count data* (Hazelett)
 
@@ -120,7 +120,7 @@ incomplete grade.
 - Learning to judge data for quality metrics of RNA-Seq.
 - Quick differential expression analysis.
 
-**Assignment V:** (Question set)
+**Assignment:** (Question set)
 
 #### Tuesday, April 12 *Single Cell analysis* (Coetzee)
 
