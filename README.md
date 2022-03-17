@@ -68,7 +68,6 @@ incomplete grade.
 
 **Homework Assignment:** 
 
-[Homework 01](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)
 
 #### Tuesday, March 22 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
@@ -96,6 +95,10 @@ incomplete grade.
 [Lecture 05](https://junkdnalab.github.io/hgg_2022/lecture%205/file_searching.html)
 
 **Assignment:** 
+
+No Due Date yet:
+
+[Homework](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)
 
 #### Thursday, March 31  *Working with data on the command line: awk & bedtools - *MORE* Searching NGS File Formats*
 
