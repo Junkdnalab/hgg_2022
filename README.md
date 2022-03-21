@@ -156,8 +156,8 @@ Adding, committing, and pull requests
 | :-- | :---- | :-------- | :--- | :--- |
 | Tue | 03/15 | HAZELETT  |      |      |
 | Thu | 03/17 | HAZELETT  |      |      |
-| Tue | 03/22 | LAWRENSON |      |      |
-| Thu | 03/24 | COETZEE   |      |      |
+| Tue | 03/22 | COETZEE   |      |      |
+| Thu | 03/24 | TBD       |      |      |
 | Tue | 03/29 | COETZEE   |      |      |
 | Thu | 03/31 | COETZEE   |      |      |
 | Tue | 04/05 | HAZELETT  |      |      |
