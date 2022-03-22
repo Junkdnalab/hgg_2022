@@ -82,7 +82,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
+[Lecture 03](https://junkdnalab.github.io/hgg_2022/lecture%203/file_formats.html)
 
 **Homework Assignment 2:** 
 
