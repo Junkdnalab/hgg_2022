@@ -14,10 +14,10 @@ skills to empower themselves to advocate for and analyze their own data.
 ## Course Format
 
 The course takes place over 6 weeks with 1.5 hour lectures on Tuesdays
-and Thursdays for a total of 12 lectures and workshops. Most lectures
-are accompanied by either readings or some light homework or both. Any
-assignments must be completed on time for full credit, no exceptions.
-There is no exam.
+and Thursdays 1:00 PM - 2:30 PM for a total of 12 lectures and workshops. 
+Most lectures are accompanied by either readings or some light homework 
+or both. Any assignments must be completed on time for full credit, no 
+exceptions. There is no final exam.
 
 ### Special considerations for COVID-19
 
@@ -70,12 +70,11 @@ incomplete grade.
 
 [Lecture 02](https://docs.google.com/presentation/d/14eYAf3q9BrKBg9Rs2n8VaSofpYeTyJmYYExX_RSIAKg/edit?usp=sharing)
 
-**Homework Assignment:** 
+**Homework Assignment 1:** 
 
+[Due March 29th](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)
 
-#### Tuesday, March 22 *Bioinformatics for bench scientists* (Guest: Lawrenson)
-
-#### Thursday, March 24 *Genomics File Formats* (Coetzee)
+#### Tuesday, March 22  *Genomics File Formats* (Coetzee)
 
 **Lecture topics:** 
 - Understanding NGS file formats
@@ -85,9 +84,15 @@ incomplete grade.
 
 [Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_formats.html)
 
-**Assignment:** 
+**Homework Assignment 2:** 
 
-#### Tuesday, March 29 *Working with data on the command line: Searching NGS File Formats* (Coetzee)
+[Due March 31st](https://junkdnalab.github.io/hgg_2022/homework/hw2.html)
+
+[Due March]
+
+#### Thursday, March 24
+
+*Working with data on the command line: Searching NGS File Formats* (Coetzee)
 
 **Lecture topics:** 
 - Search for characters or patterns in a text file using the grep command
@@ -98,13 +103,7 @@ incomplete grade.
 
 [Lecture 05](https://junkdnalab.github.io/hgg_2022/lecture%205/file_searching.html)
 
-**Assignment:** 
-
-No Due Date yet:
-
-[Homework](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)
-
-#### Thursday, March 31  *Working with data on the command line: awk & bedtools - *MORE* Searching NGS File Formats*
+#### Tuesday, March 29 *Working with data on the command line: awk & bedtools - *MORE* Searching NGS File Formats*
 
 **Lecture topics:** 
 - Search for characters or patterns in a column specific manner using awk.
@@ -112,14 +111,14 @@ No Due Date yet:
 
 **Assignment:** 
 
-#### Tuesday, April 5 *Modeling count data* (Hazelett)
+#### Thursday, March 31  *Modeling count data* (Hazelett)
 
 **Lecture topics:** 
 - Probability, NGS and generative modeling
 - Gene Ontology (GO) & Pathway Analysis, David,
 - GoRilla, GENAVI. Gene Set Enrichment Analysis (GSEA) and MSigDB.
 
-#### Thursday, April 7 *RNA seq analysis* (Coetzee)
+#### Tuesday, April 5 *RNA seq analysis* (Coetzee)
 
 **Lecture topics:** 
 
@@ -129,15 +128,9 @@ No Due Date yet:
 
 **Assignment:** (Question set)
 
-#### Tuesday, April 12 *Single Cell analysis* (Coetzee)
+#### Thursday, April 7*Single Cell analysis* (Coetzee)
 
-Workshop / Homework Review
-
-#### Thursday, April 14 *Microbiome* (Vujkovic-Cvijin)
-
-**Lecture topics:** 
-
-#### Tuesday, April 19 *Project management and Git*
+#### Tuesday, April 12 *Project management and Git*
 
 **Lecture topics:** 
 
@@ -147,8 +140,15 @@ Git Basics; creating and cloning a repo
 
 Adding, committing, and pull requests
 
-#### Thursday, April 21 *automated machine learning pipelines* Urbanowicz
+#### Thursday, April 14 *Microbiome* (Vujkovic-Cvijin)
 
+**Lecture topics:** 
+
+#### Tuesday, April 19 *Bioinformatics for bench scientists* (Guest: Lawrenson)
+
+TBD
+
+#### Thursday, April 21 *automated machine learning pipelines* Urbanowicz
 
 ### Schedule and Due Dates:
 
@@ -156,8 +156,8 @@ Adding, committing, and pull requests
 | :-- | :---- | :-------- | :--- | :--- |
 | Tue | 03/15 | HAZELETT  |      |      |
 | Thu | 03/17 | HAZELETT  |      |      |
-| Tue | 03/22 | COETZEE   |      |      |
-| Thu | 03/24 | COETZEE   |      |      |
+| Tue | 03/22 | COETZEE   | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html) | 03/29 |
+| Thu | 03/24 | COETZEE   | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html) | 03/31 |
 | Tue | 03/29 | COETZEE   |      |      |
 | Thu | 03/31 | HAZELETT  |      |      |
 | Tue | 04/05 | COETZEE   |      |      |

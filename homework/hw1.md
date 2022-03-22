@@ -1,92 +1,46 @@
-Homework #1
+## Homework 1
 ============
 
-Setup
-============
-For this homework, we will learn a bit about protein coding genes and transcripts in the human genome by working with a [GTF](http://uswest.ensembl.org/info/website/upload/gff.html) file 
-from Ensembl that describes all of the protein coding _and_ non coding genes that have been annotated for human. Now, we know that most
-have more than one isoform, and accordingly, this GTF reports information about the exons, introns, and UTRs of each transcript for each 
-gene. But first, a couple of warm-up questions.
+In this assignment we will practice basic skills we learned in week 1 to populate your virtual linux machine with some typical structure. Read carefully as the instructions have to be followed to the letter to get the right answers. To display a terminal interaction in this markdown when you hand it in, simply paste the entire contents between triple single backquotes as follows:
 
-Question #1
-============
-Create a new directory in your home directory called homework-01.
-Navigate into that directory.
-Show your work by providing the command you used.
+```hazelettd@54b2bfd85cd6:~$ passwd
+Changing password for hazelettd.
+Current password: 
+New password: 
+Retype new password: 
+passwd: password updated successfully```
 
-Question #2
-============
-Using a UNIX pipe, write a command that counts how many directories are in the `/home` directory on your linux container on `iapetus`. 
-Show your work by providing the command you used.
+1. Navigate to your user's home directory. How do you know you're there? What is the shortest command you can type to get you there?
 
-Question #3
-============
-Unix computers have a convenient file located at `/usr/share/dict/words` that stores all (or at least the majority) of words in the English language. What is the 55,000th word in that file? Show your work by providing the command you used.
+2. In the home directory, create a subdirectory (folder) called 'Desktop'. Now create other folders called 'Projects', 'Music', 'Downtown', and 'Pictures'.
 
-Question #4
-============
-Using a Unix command, how many visible and invisible characters are in the 55,000th word? Show your work by providing the command you used.
+3. The `Downtown` folder was mistakenly named. What are two alternative methods (commands) you could use to correct your mistake and rename the folder? Rename the folder as 'Downloads'.
 
-Collecting the data we will use for the rest of this homework
-=============================================================
-Let's start by downloading this GTF file from Ensemble using a new UNIX command called `curl`. [curl](https://www.tutorialspoint.com/unix_commands/curl.htm)
-transfers data from a remote file (i.e., on an FTP or HTTP site) directly to your terminal. In other words, it is the command line
-way of going to a website and downloading something. This command is super useful because most real world analyses require getting data
-or annotations from other resources such as the UCSC genome browser.
+4. Copy the contents of /data into a new folder of the same name on your home directory, _in the 'Desktop' folder_. Hint: A wildcard '*' could be used to copy all the folder's contents at once.
 
-So, you must start by downloading this file. Note that we use the ">" to redirect the data retrieved by `curl` into a new file called
-`human.genes.gtf.gz`
+5. Use the 'ls' command to determine the size of the fastq files (only!) in your new ~/Desktop/data folder. If you're not sure which options to use to include size, use the 'man' tool. Can you confirm that the fastq files are the same size as the originals you copied from the root directory? (Show your terminal interactions)
 
-    curl ftp://ftp.ensembl.org/pub/release-87/gtf/homo_sapiens/Homo_sapiens.GRCh38.87.gtf.gz > human.genes.gtf.gz
-    
-Now, notice that the filename ends in ".gz". This means that it is compressed with a program called `gzip`. If you have ever used the 
-compression utilities on your Mac or Windows machine, you have likely seen files that end with ".zip".  This is the exact same concept,
-but ".gz" file were compressed with a slightly different tool.  So, before we get started, we have to first "decompress" this file into
-a plain old text file (in GTF format as we discuss in class) that we can easily work with using the UNIX commands we have learned thus far.
-We do this as follows using yet another new UNIX command called `gzip`. The `-d` option tells `gzip` to decompress the file.
+6. The keyword '..' denotes "one folder up in the filesystem tree". Navigate to the Desktop folder you created. Type the following command at your terminal prompt:
 
-    gzip -d human.genes.gtf.gz
-    
-Now you should see that the file is now called "human.genes.gtf" --- gzip automatically removed the ".gz" extension once it 
-finished decompressing the file.
+`mv data ..`
 
-Question #5
-============
-How many GTF _data_ lines are in this file? Note that the first few lines in the file beginning with "#" are so-called "header" lines 
-describing thing like the creation date, the genome version (more on that later in the course), etc.  Header lines should not be counted
-as _data_ lines.
+What is the result of this command?
 
-Show your work by providing the command you used.
+7. From within the Desktop directory (you may have to navigate there if you changed your present working directory to answer the previous question) move the data folder and its contents back into 'Desktop' using a pathname composed with '..' and using '.' as the target location. '.' is shorthand for "the present working directory".
 
-Question #6
-============
-How many GTF _data_ lines are in this file for _protein coding genes_? Note that entries (lines in the file for protein coding genes 
-will contain the following text: gene_biotype "protein_coding"
+8. Navigate to your home directory. Type the following command _exactly_:
 
-Use the string above with a command you have learned to find such lines.  
+`rmdir Desktop/data`
 
-Hint: the UNIX pipe may come in handy here...
+From the error message, can you explain why the command didn't work?
 
-Show your work by providing the _single_ command you used.
+9. Now try the following command:
 
-Question #7
-============
-How many GTF _data_ lines are in this file for _exons_ from _protein coding genes_? 
+`rm -rf Desktop/data`
 
-Show your work by providing the _single_ command you used.
+What do the '-r' and '-f' flags do in this instance? (Hint: consult the 'man' tool)
 
-Question #8
-============
-How many [CDS](https://www.biostars.org/p/65162/) exons ("CDS" in column 3)  from _protein coding genes_ exist 
-on per each chromosome (column 1 in the GTF file)?  That is, the count per chromsome.
+10. Use 'man' to figure out which options to re-copy *recursively* the data directory from the root /data and all its contents _in a single command_ back into the home directory ('~/'). Use ls to confirm that it worked, and then remove the directory and its contents once more (we need to conserve space for now and don't want to keep 2 copies after this assignment as some of these files are large).
 
-Show your work by providing the command or commands you used.
-
-Question #9
-============
-Explain how you might design an analysis of this file that would reveal how many distinct protein coding genes there are in the human genome. Hint: you may not have learned all of the command you might need - the point is to think about what what you _could_ do with the commands you know of and what limitations would have to be addressed.
-
-Bonus
-=====
-Using `grep` and the Unix words file from above, write a command that returns only five-letter words. Hint: it is okay to do some googling.
+Bonus: As we discovered in lecture, /data files are off limits to editing. Are you able to edit the contents of files in the copied directory? Why or why not?:
 
