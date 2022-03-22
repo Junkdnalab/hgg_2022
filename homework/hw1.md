@@ -1,7 +1,15 @@
 ## Homework 1
 ============
 
-In this assignment we will practice basic skills we learned in week 1 to populate your virtual linux machine with some typical structure. Read carefully as the instructions have to be followed to the letter to get the right answers. To display a terminal interaction in this markdown when you hand it in, simply paste the entire contents between triple single backquotes as follows:
+In this assignment we will practice basic skills we learned in week 1 to populate your virtual linux machine with some typical structure. Read carefully as the instructions have to be followed to the letter to get the right answers. 
+
+You may turn in your answers in a form that is most comfortable to you including as a **MS Word document**. If would like to challenge yourself to use a text editor such as vim, nano, or Notes (on Mac) you can download the markdown version of the assignment as follows: 
+
+`wget https://github.com/Junkdnalab/hgg_2022/blob/main/homework/hw1.md`
+
+and enter your answers directly into the markdown text file, which we will accept as an email attachment.
+
+To display a terminal interaction in this markdown when you hand it in, simply paste the entire contents between triple single backquotes as follows:
 
 ```
 hazelettd@54b2bfd85cd6:~$ passwd
