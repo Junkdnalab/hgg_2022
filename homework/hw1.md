@@ -3,12 +3,14 @@
 
 In this assignment we will practice basic skills we learned in week 1 to populate your virtual linux machine with some typical structure. Read carefully as the instructions have to be followed to the letter to get the right answers. To display a terminal interaction in this markdown when you hand it in, simply paste the entire contents between triple single backquotes as follows:
 
-```hazelettd@54b2bfd85cd6:~$ passwd
+```
+hazelettd@54b2bfd85cd6:~$ passwd
 Changing password for hazelettd.
 Current password: 
 New password: 
 Retype new password: 
-passwd: password updated successfully```
+passwd: password updated successfully
+```
 
 1. Navigate to your user's home directory. How do you know you're there? What is the shortest command you can type to get you there?
 
