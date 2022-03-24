@@ -101,7 +101,7 @@ incomplete grade.
 
 **Lecture slides:**
 
-[Lecture 05](https://junkdnalab.github.io/hgg_2022/lecture%205/file_searching.html)
+[Lecture 04](https://junkdnalab.github.io/hgg_2022/lecture%204/file_searching.html)
 
 #### Tuesday, March 29 *Working with data on the command line: awk & bedtools - *MORE* Searching NGS File Formats*
 
