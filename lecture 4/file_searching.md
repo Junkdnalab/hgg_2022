@@ -36,6 +36,8 @@ date: 03/24/2022
 width: 1440
 height: 900
 transition: fade
+font-import: https://fonts.googleapis.com/css?family=Roboto
+font-family: 'Roboto'
 
 
 ## **Searching NGS File Formats**
