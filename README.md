@@ -109,7 +109,13 @@ incomplete grade.
 - Search for characters or patterns in a column specific manner using awk.
 - Learn to use bedtools to accomplish genome arithmetic.
 
-**Assignment:** 
+**Lecture slides:**
+
+[Lecture 05](https://junkdnalab.github.io/hgg_2022/lecture%205/more_file_searching.html)
+
+**Homework Assignment 3:** 
+
+[Due March 31st](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)
 
 #### Thursday, March 31  *Modeling count data* (Hazelett)
 
@@ -158,7 +164,7 @@ TBD
 | Thu | 03/17 | HAZELETT  |      |      |
 | Tue | 03/22 | COETZEE   | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html) | 03/29 |
 | Thu | 03/24 | COETZEE   | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html) | 03/31 |
-| Tue | 03/29 | COETZEE   |      |      |
+| Tue | 03/29 | COETZEE   | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw2.html) | 04/05     |
 | Thu | 03/31 | HAZELETT  |      |      |
 | Tue | 04/05 | COETZEE   |      |      |
 | Thu | 04/07 | COETZEE   |      |      |

@@ -24,7 +24,7 @@ What fraction of the GWAS SNPs are exonic?
 
 ***
 ### Question #6
-What fraction of the GWAS SNPs are lie in either enhancers or promoters in the hESC data we have?
+What fraction of the GWAS SNPs lie in either enhancers or promoters in the hESC data we have?
 
 ***
 ### Question #7
