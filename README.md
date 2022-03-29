@@ -115,7 +115,7 @@ incomplete grade.
 
 **Homework Assignment 3:** 
 
-[Due March 31st](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)
+[Due April 5](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)
 
 #### Thursday, March 31  *Modeling count data* (Hazelett)
 
