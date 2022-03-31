@@ -1,0 +1,1047 @@
+<style>
+.small-code pre code {
+  font-size: 1 em;
+}
+.reveal small {
+  position: absolute;
+  bottom: 0;
+  font-size: 50%;
+}
+.reveal attribution {
+  align: right;
+  font-size: 70%;
+}
+.reveal .slides{
+    width: 90% !important;  
+    height: 90% !important;
+}
+.reveal p{
+  line-height: 1.5 !important;
+}
+.reveal code{
+  background-color: #F8F8F8;
+  color: #1E90FF;
+}
+.reveal code.bad {
+  color: #B73239;
+  background-color: #F4F4F4;
+}
+.reveal pre code {
+  white-space: pre;
+  overflow: auto;
+  color: #00008B;
+}
+</style>
+
+Lecture 6 Computational Biology Experiments
+========================================================
+author: Dennis Hazelett
+date: 3/31/2022
+autosize: true
+transition: fade
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(cache=TRUE)
+```
+
+## **Efficient Design Principles for Analysis and Interpretation**
+
+<small>This work, "Analysis and Design of Computational Biology Experiments"is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by Dennis Hazelett.</small>
+
+Bioinformatics, Computational, & Systems Biology
+========================================================
+
+<center>
+![](images/foamtree.png)
+</center>
+
+Bioinformatics, Computational, & Systems Biology
+========================================================
+
+Bioinformatics: standardized skills and tools for analysis of (typically) large high-throughput experiments
+
+_<blockquote>When you think about it, caring for patients is 99 percent information and 1 percent intervention, so it's clear that with or without genomics, the paradigm is shifting. Bioinformatics brings a cutting edge capacity to healthcare.</blockquote>_
+
+<attribution>--Christopher G. Chute MD, PhD (Johns Hopkins)</attribution>
+
+Bioinformatics, Computational, & Systems Biology
+========================================================
+
+Computational Biology: The application of mathematical models involving (formerly) prohibitive computational infrastructure as a general approach to drawing integrated inferences about biological questions
+
+
+<img src="images/compbio1_xkcd.png" height=400></img>
+
+
+<small>source: Randall Munroe's [XKCD comic strip (link)](https://xkcd.com/1605/)</small>
+
+Bioinformatics, Computational, & Systems Biology
+========================================================
+
+_<blockquote>Systems biology is an approach in biomedical research to understanding the larger picture—be it at the level of the organism, tissue, or cell—by putting its pieces together. It’s in stark contrast to decades of reductionist biology, which involves taking the pieces apart.</blockquote>_ 
+
+<attribution>--Christophe Wanjek ([NIH website](https://irp.nih.gov/catalyst/v19i6/systems-biology-as-defined-by-nih))</attribution>
+
+Bioinformatics, Computational, & Systems Biology
+========================================================
+
+<center>
+![](images/all_biology_is_compbio.png)
+</center>
+
+[source: Markowetz 2017](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2002050)
+
+Overview
+========================================================
+
+- **Experimental Design**
+- **Management of Big Data**
+- **Biological Enrichment**
+- **Use (and Misuse) of Ontologies and Their Significance**
+
+Experimental Design is the Key to Success!
+========================================================
+
+- choice of cell lines or living models
+
+<center><img src="images/Adding-Cell-Culture-to-a-Cell-Dish.jpg" height=400></img></center>
+
+Experimental Design is the Key to Success!
+========================================================
+
+- choice of cell lines or living models
+- choice of control conditions, genotypes, vehicle etc.
+
+Experimental Design is the Key to Success!
+========================================================
+
+- choice of cell lines or living models
+- choice of control conditions, genotypes, vehicle etc.
+- care not to conflate variables
+
+Experimental Design is the Key
+========================================================
+
+<center>
+<img src="images/faulty_design.png" height=500></img>
+</center>
+
+Experimental Design is the Key
+========================================================
+
+- choice of cell lines or living models
+- choice of control conditions, genotypes, vehicle etc.
+- care not to conflate variables
+- statistical power vs. design
+  - "no free lunch"
+  - emphasize quality over quantity
+  
+ENCODE CRISPR knockout of TFs in K562 cells
+========================================================
+
+<center>
+<img src="images/ordered_crispri-plot-1.png"></img>
+</center>
+
+ENCODE CRISPR knockout of TFs in K562 cells
+========================================================
+
+<center>
+![](images/encode_expt_design.png)
+</center>
+
+ENCODE CRISPR knockout of TFs in K562 cells
+========================================================
+
+<center>
+<img src="images/pooled_design.png" height=600></img>
+</center>
+
+Experimental Design is the Key
+========================================================
+
+- choice of cell lines or living models
+- choice of control conditions, genotypes, vehicle etc.
+- care not to conflate variables
+- statistical power vs. design
+  - "no free lunch"
+  - emphasize quality over quantity
+- biological replication vs technical
+
+Experimental Design is the Key
+========================================================
+
+- choice of cell lines or living models
+- choice of control conditions, genotypes, vehicle etc.
+- care not to conflate variables
+- statistical power vs. design
+  - "no free lunch"
+  - emphasize quality over quantity
+- biological replication vs technical
+- sequencing depth (complexity)
+
+Library Complexity in experimental design
+========================================================
+
+<center>
+![](images/complexity_graph.png)
+</center>
+
+<small>From: Predicting the molecular complexity of sequencing libraries, [Daley & Smith; Nature Methods 2013 PMID: 23435259](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3612374/)</small>
+
+Library Complexity in experimental design
+========================================================
+
+why sequencing depth matters
+
+<center>
+![](images/ordered_crispri-plot-1.png)
+</center>
+
+Management of Big Data Projects
+========================================================
+
+<center>
+<img src="images/tcga_omics.png" height=600>
+</center>
+
+<small>from "The Cancer Genome Atlas Pancancer Analysis Project, [Nature Genetics 2013](https://www.nature.com/articles/ng.2764)</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Don't reinvent the wheel!_**
+
+<center>
+<img src="images/wheel_gary_larson.png" height=500>
+</center>
+
+<small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757) and "The Far Side" by Gary Larson</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Document EVERYTHING_**
+
+<center>
+![](images/mw1920_internal-asset1-36.png)
+</center>
+
+<small>[BIT.AI Blog](https://blog.bit.ai/technical-documentation/)</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Document EVERYTHING_**
+
+- use github! (ISSUES)
+
+<small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757)</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Document EVERYTHING_**
+
+- use github!
+- comment your code extensively
+
+<small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757)</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Document EVERYTHING_**
+
+- use github!
+- comment your code extensively
+- log decisions (--> README.md)
+
+<small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757)</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Automate your workflows_**
+
+<center>
+<img src="images/1913-December-18-Rube-Goldberg-machine-cartoon-beer-bottle-opener.jpg" height=500>
+</center>
+
+<small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757) and [the Norman Rockwell Museum](https://www.nrm.org/2018/11/the-art-and-wit-of-rube-goldberg/)</small>
+
+Management of Big Data Projects
+========================================================
+
+**_Continuously measure Performance_**
+
+- use profiling
+
+Management of Big Data Projects
+========================================================
+
+**_Monitor Execution_**
+
+- Sanity Checks!!
+
+<center>
+<img src="images/sanity_checks.jpg" height=500>
+</center>
+
+Biological Enrichment
+========================================================
+
+We hear this term of art _constantly_ throughout biology, molecular biology, genomics & especially bioinformatics.
+
+
+Why enrichment?
+========================================================
+
+### ENRICHMENT IS **evidence for organized activity**
+
+<center>
+<img src="images/fish_school.jpg" height=500>
+</center>
+
+What is enrichment?
+========================================================
+
+more things than expected due to random chance
+
+What is enrichment?
+========================================================
+
+more things than expected due to random chance
+
+- what do you expect?
+
+Calculating enrichment
+========================================================
+
+<center>
+<img src="images/bw_marbles.jpg">
+</center>
+
+Calculating enrichment
+========================================================
+
+- finite number of marbles
+
+Calculating enrichment
+========================================================
+
+- finite number of marbles
+- known number of blacks & whites
+
+Calculating enrichment
+========================================================
+
+- finite number of marbles
+- known number of blacks & whites
+- therefore probabilities are known
+
+Calculating enrichment
+========================================================
+
+- finite number of marbles
+- known number of blacks & whites
+- therefore probabilities are known p_white, p_black
+
+Calculating enrichment
+========================================================
+
+If we select a single marble, the probabilities change
+
+m = 15, n = 45
+
+Calculating enrichment
+========================================================
+
+If we select a single marble, the probabilities change
+
+m = 15, n = 45
+
+draw1: p_m = 15 / 15 + 45
+```{r draw-one, echo = FALSE}
+round(15/60, 2)
+```
+
+Calculating enrichment
+========================================================
+
+If we select a single marble, the probabilities change
+
+m = 15, n = 45
+
+draw1: p_m = 15 / 15 + 45
+```{r draw-one-b, echo = FALSE}
+round(15/60, 2)
+```
+draw2: p_m = 14 / 14 + 45
+```{r draw-two, echo = FALSE}
+round(14/59, 3)
+```
+
+Calculating enrichment
+========================================================
+
+If we select multiple marbles, the probabilities are described by
+
+# [Hypergeometric distribution](https://en.wikipedia.org/wiki/Hypergeometric_distribution)
+
+Calculating enrichment
+========================================================
+
+If we select multiple marbles, the probabilities are described by
+
+# [Hypergeometric distribution](https://en.wikipedia.org/wiki/Hypergeometric_distribution)
+
+Hypergeo is related to binomial dist
+- finite population 
+- sampling without replacement
+
+Calculating enrichment in R
+========================================================
+class: small-code
+
+Function `phyper`
+
+```{r example-one, eval=FALSE}
+phyper(q, m, n, k, lower.tail = TRUE, log.p = FALSE)
+```
+
+- `q` vector of quantiles representing the number of white marbles drawn without replacement from a bag which contains both black and white marbles.
+
+- `m` the number of white marbles in the bag
+
+- `n` the number of black marbles in the bag
+
+- `k` the number of marbles drawn
+
+
+Hypergeometric distribution
+========================================================
+class: small-code
+(PMF = "**P**robability **M**ass **F**unction)
+
+```{r pmf, echo = FALSE, results = 'hide'}
+library("dplyr")
+library("ggplot2")
+library("foreach")
+library("RColorBrewer")
+## 
+x = 0:15
+k = 0:60
+pmfprobs <- foreach(i = x, .combine = 'rbind') %do% data.frame(x=rep(i, length(k)), k, p = dhyper(i, 15, 45, k))
+ggplot(pmfprobs[pmfprobs$k %in% c(1, 10, 20, 30, 40, 50, 59),]) + 
+  geom_point(aes(x = x, y = p, colour = factor(k))) +
+  geom_line(aes(x = x, y = p, colour = factor(k))) +
+  scale_color_brewer(palette="Dark2", name = "number of trials") +
+  ylab("probability") +
+  xlab("successes")
+  theme_minimal() +
+  theme(text = element_text(size=24)) +
+  ggtitle("Probability Mass Function (m=15, n=45)")
+```
+
+Hypergeometric distribution
+========================================================
+class: small-code
+(PMF = "**P**robability **M**ass **F**unction)
+
+```{r pmf-code, eval=FALSE}
+library("dplyr")
+library("ggplot2")
+library("foreach")
+library("RColorBrewer")
+## 
+x = 0:15
+k = 0:60
+pmfprobs <- foreach(i = x, .combine = 'rbind') %do% data.frame(x=rep(i, length(k)), k, p = dhyper(i, 15, 45, k))
+ggplot(pmfprobs[pmfprobs$k %in% c(1, 10, 20, 30, 40, 50, 59),]) + 
+  geom_point(aes(x = x, y = p, colour = factor(k))) +
+  geom_line(aes(x = x, y = p, colour = factor(k))) +
+  scale_color_brewer(palette="Dark2", name = "number of trials") +
+  ylab("probability") +
+  xlab("successes")
+  theme_minimal() +
+  theme(text = element_text(size=24)) +
+  ggtitle("Probability Mass Function (m=15, n=45)")
+```
+
+Hypergeometric distribution: code
+========================================================
+class: small-code
+
+```{r example-one-A, eval=FALSE}
+#                       \/       \/
+#                       \/       \/
+#                       \/       \/
+phyper(q, m, n, k, lower.tail = FALSE, log.p = FALSE)
+```
+
+Hypergeometric distribution: code
+========================================================
+class: small-code
+
+```{r hyper-graph, echo = FALSE, results = 'hide'}
+mydat <- pmfprobs[pmfprobs$k == 28,]
+ggplot(mydat) + 
+  geom_point(aes(x = x, y = p), col = "purple", cex = 2) +
+  geom_line(aes(x = x, y = p), col = "purple") +
+  scale_color_brewer(palette="Dark2", name = "number of trials") +
+  ylab("probability") +
+  xlab("successes")
+  theme_minimal() +
+  theme(text = element_text(size=24)) +
+  ggtitle("Probability Mass Function (m=15, n=45)")
+```
+
+Hypergeometric distribution: code
+========================================================
+class: small-code
+
+```{r hyper-graph-tail, echo = FALSE, results = 'hide'}
+mydat <- pmfprobs[pmfprobs$k == 28,]
+ggplot(mydat) + 
+  geom_point(aes(x = x, y = p), col = "purple", cex = 2) +
+  geom_line(aes(x = x, y = p), col = "purple") +
+  geom_point(data = mydat[mydat$x > 10,], aes(x = x, y = p), col = "red", cex = 5) +
+  scale_color_brewer(palette="Dark2", name = "number of trials") +
+  ylab("probability") +
+  xlab("successes")
+  theme_minimal() +
+  theme(text = element_text(size=24)) +
+  ggtitle("Probability Mass Function (m=15, n=45)")
+```
+
+Hypergeo example
+========================================================
+
+- 100 marbles
+- 20 are white
+- Question: draw 10 (k), obtain 3 (q); **how likely is $\geq 3$?**
+
+
+Hypergeo example
+========================================================
+class: small-code
+
+- 100 marbles
+- 20 are white
+- Question: draw 10 (k), obtain 3 (q); **how likely is $\geq 3$?**
+
+```{r example-one-run}
+phyper(2, 20, 80, 10, lower.tail = FALSE, log.p = FALSE)
+```
+
+`lower.tail	
+logical; if TRUE (default), probabilities are P[X ≤ x], otherwise, P[X > x]`
+
+Hypergeo example
+========================================================
+class: small-code
+
+- 100 marbles
+- 20 are white
+- Question: draw 10 (k), obtain 3 (q); **how likely is $\geq 3$?**
+
+```{r example-one-run-graph, echo=FALSE, results = 'hide'}
+q = 1:10
+probability = phyper(q=q, m=20, n=80, k=10, lower.tail=FALSE)
+plot(q, probability, xlab = "number of successes", ylab = "probability in right tail", pch=16)
+lines(q, probability)
+abline(h = 0.05, lty = 2, col = 'red')
+abline(v = 2, col = 'blue')
+```
+
+Hypergeo example
+========================================================
+class: small-code
+
+- 100 marbles
+- 20 are white
+- draw 10 (k), obtain 3 (q); **how likely is _exactly_ 3?**
+
+```{r example-one-run-graph-density-code, eval=FALSE}
+q = 0:10
+probability = dhyper(x=q, m=20, n=80, k=10)
+plot(q, probability, xlab = "number of successes", ylab = "probability in right tail", pch=16)
+lines(q, probability)
+abline(h = 0.05, lty = 2, col = 'red')
+abline(v = 3, col = 'blue')
+```
+
+Hypergeo example
+========================================================
+class: small-code
+
+- 100 marbles
+- 20 are white
+- draw 10 (k), obtain 3 (q); **how likely is _exactly_ 3?**
+
+```{r example-one-run-graph-density-graph, echo=FALSE}
+q = 0:10
+probability = dhyper(x=q, m=20, n=80, k=10)
+plot(q, probability, xlab = "number of successes", ylab = "probability in right tail", pch=16)
+lines(q, probability)
+abline(h = 0.05, lty = 2, col = 'red')
+abline(v = 3, col = 'blue')
+round(dhyper(x=3, m=20, n=80, k=10), 3)
+```
+
+Hypergeometric distribution 1-tailed
+========================================================
+
+# [Fisher's exact test](https://en.wikipedia.org/wiki/Fisher%27s_exact_test)
+
+What about general enrichment problems? 
+========================================================
+- large populations >> k, $p$=very small
+- background available
+
+What about general enrichment problems? 
+========================================================
+- use math to estimate uncertainty
+- aside: if probabilities known: use $\chi ^2$ test!
+
+What about general enrichment problems? 
+========================================================
+- use math to estimate uncertainty
+- aside: if probabilities known: use $\chi ^2$ test!
+- true probability not known: Bayes to the rescue
+
+What about general enrichment problems? 
+========================================================
+suppose we have 2 sets of observations:
+
+- one is **control** condition
+- one is **treatment** condition
+- each observation is a "draw" as in hypergeo, but now
+
+What about general enrichment problems? 
+========================================================
+suppose we have 2 sets of observations:
+
+- one is **control** condition
+- one is **treatment** condition
+- each observation is a "draw" as in hypergeo, but now
+
+### sample with replacement
+### population unknown in both cases
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+What is the probability of finding a read in a given gene (random draw), given the data
+
+```{r beta-rna-seq}
+credible_expression <- rbeta(1e5, 234, 4e7)
+cpm <- credible_expression * 1e6
+plot(density(cpm), xlim=c(0,100))
+```
+
+```{r cpm-result, echo = FALSE}
+paste(round(mean(cpm), 1), "cpm")
+```
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+Splicing: splice forms A and B 
+
+<img src = "images/isoforms.png", style="width:800px;height:400px;">
+
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+Splicing: splice forms A and B 
+
+Controls: A:B = 48:186
+
+```{r beta-splicing}
+# probability of observing form A in controls
+plot(density(rbeta(1e5, 48, 186)), xlim=c(0,1), main="splicing example")
+```
+
+```{r beta-splicing-frac, echo = FALSE}
+# probability of observing form A in controls
+round(mean(rbeta(1e5, 48, 186)), 3)
+```
+
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+New Condition: observe 24 A, 47 B
+
+```{r beta-splicing-observe}
+# probability of observing form A in controls
+plot(density(rbeta(1e5, 48, 186)), xlim=c(0,1), main="splicing example")
+lines(density(rbeta(1e5, 24, 47)))
+```
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+New Condition: observe 24 A, 47 B
+
+```{r beta-splicing-diff}
+# probability of observing form A in controls
+plot(density(rbeta(1e5, 48, 186)), xlim=c(0,1), main="splicing example")
+lines(density(rbeta(1e5, 24, 47)))
+lines(density(rbeta(1e5, 24, 47)-rbeta(1e5, 48, 186)), lty=2, col='red')
+```
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+**"Null"** hypothesis test: rejection!
+
+```{r beta-splicing-pval}
+nsamples <- 1e6
+treatment <- rbeta(nsamples, 24, 47)
+control <- rbeta(nsamples, 48, 186)
+p_value <- sum(treatment - control <= 0) / nsamples
+print(p_value)
+```
+
+
+General Enrichment Calculation: Applications
+========================================================
+class: small-code
+
+- splicing
+
+General Enrichment Calculation: Applications
+========================================================
+
+- splicing
+- enrichment of SNPs in epigenomics data
+
+General Enrichment Calculation: Applications
+========================================================
+
+- splicing
+- enrichment of SNPs in epigenomics data
+- allele specific expression (ASE)
+
+General Enrichment Calculation: Applications
+========================================================
+
+### Any problem involving count data where the underlying probability is not known but a suitable "background" condition is available for comparison
+
+Gene Set Enrichment
+========================================================
+
+<img src="gsea_plot_example.jpg", style="width:600px;height:520px;"></img>
+
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+  - competitive H0: "the genes in my feature set are no more active than the background"
+  
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+  - competitive H0: "the genes in my feature set are no more active than the background"
+  - self-contained: "genes/annotations of my feature set are not active in this list"
+  
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+  - competitive H0: "the genes in my feature set are no more active than the background"
+  - self-contained: "genes/annotations of my feature set are not active in this list"
+* Over Representation Analysis (ORA) -- **"competitive"**
+  - DAVID, clusterProfiler, LEGO
+
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+  - competitive H0: "the genes in my feature set are no more active than the background"
+  - self-contained: "genes/annotations of my feature set are not active in this list"
+* Over Representation Analysis (ORA) -- **"competitive"**
+  - DAVID, clusterProfiler, LEGO
+  - any of the count based analysis methods we've reviewed
+
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+  - competitive H0: "the genes in my list are no more active than the background"
+  - self-contained: "genes/annotations of my feature set are not active in this list"
+* Over Representation Analysis (ORA) -- **"competitive"**
+  - DAVID, clusterProfiler, LEGO
+  - any of the count based analysis methods we've reviewed
+* Gene Set Enrichment Analysis (GSEA) -- **"competitive"**
+
+Gene Set Enrichment
+========================================================
+
+* **competitive** and **self-contained** methods
+  - competitive H0: "the genes in my list are more active than the background"
+  - self-contained: "genes/annotations of my feature set are not active in this list"
+
+* Over Representation Analysis (ORA) -- **"competitive"**
+  - any of the count based analysis methods we've reviewed
+  - even t-tests have been used (e.g. "DAVID")
+* Gene Set Enrichment Analysis (GSEA) -- **"competitive"**
+* **"self-contained"** methods test whether there are any active features in the set of interest
+  - global test, GlobalANCOVA, FORGE
+
+Enrichment in ranked lists
+========================================================
+
+<img src="marbles_in_a_row.jpeg", style="width:259px;height:194px;"></img>
+
+Online methods
+========================================================
+
+- [GOrilla](http://cbl-gorilla.cs.technion.ac.il/)
+- [**G**ene **S**et **E**nrichment **A**nalysis (GSEA)](https://www.gsea-msigdb.org/gsea/index.jsp)
+
+How GSEA Works
+========================================================
+
+shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)
+
+<img src="GSEA_1.png", style="width:800px;height:260px;"></img>
+
+How GSEA Works
+========================================================
+
+<img src="GSEA_2.png", style="width:650px;height:400px;"></img>
+
+
+How GSEA Works
+========================================================
+
+<img src="GSEA_3.png", style="width:650px;height:400px;"></img>
+
+How GSEA Works
+========================================================
+
+<img src="GSEA_4.png", style="width:650px;height:400px;"></img>
+
+How GSEA Works
+========================================================
+
+<img src="GSEA_5.png", style="width:600px;height:500px;"></img>
+
+Ontologies, their uses and misuses
+========================================================
+
+<i><b>"In computer science and information science, an ontology encompasses a representation, formal naming and definition of the categories, properties and relations between the concepts, data and entities that substantiate one, many or all domains of discourse. More simply, an ontology is a way of showing the properties of a subject area and how they are related, by defining a set of concepts and categories that represent the subject."</i></b>
+
+(from Wikipedia)
+
+Ontologies
+========================================================
+
+[GeneOntology.org](http://geneontology.org/docs/ontology-documentation/)
+
+Gene Ontology is a curated graph of terms
+========================================================
+
+* `Molecular Function` the tasks performed by individual gene products (_e.g._ "adenylate cyclase activity")
+* `Cellular component` subcellular structures, locations, and macromolecular complexes (_e.g._ "ribosome")
+* `Biological Process` broad biological goals, such as mitosis or purine metabolism, that are accomplished by ordered assemblies of molecular functions (_e.g._ "DNA repair")
+
+Gene Ontology is a curated graph of terms
+========================================================
+
+* `Molecular Function` the tasks performed by individual gene products (_e.g._ "adenylate cyclase activity")
+* `Cellular component` subcellular structures, locations, and macromolecular complexes (_e.g._ "ribosome")
+* `Biological Process` broad biological goals, such as mitosis or purine metabolism, that are accomplished by ordered assemblies of molecular functions (_e.g._ "DNA repair")
+
+  - each gene annotated to a node on all three GOs
+
+Other Useful Ontologies
+========================================================
+
+  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
+
+Other Useful Ontologies
+========================================================
+
+  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
+  - [Reactome](https://reactome.org/)
+
+Other Useful Ontologies
+========================================================
+
+  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
+  - [Reactome](https://reactome.org/)
+  - [SynGO](https://www.syngoportal.org)
+
+![](images/syngopage1.png)
+
+Other Useful Ontologies
+========================================================
+
+  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
+  - [Reactome](https://reactome.org/)
+  - [SynGO](https://www.syngoportal.org)
+  - [Panther](http://www.pantherdb.org/panther/ontologies.jsp)
+  - [WikiPathways](https://www.wikipathways.org/index.php/WikiPathways)
+
+Other Useful Ontologies
+========================================================
+
+[Reactome](https://reactome.org/) is an expert-authored, peer-reviewed knowledgebase of reactions and pathways.
+
+<img src="images/reactome_release_info.png";"></img>
+
+- Manually curated human pathways with experimental evidence (regarded highest quality)
+- Manually inferred pathways for other organism (_e.g. Gallus gallus, Mus musculus_)
+
+**Reactome is useful when...**
+- Know molecular details of a pathway based on literature (_e.g. directed pathway_)
+- Learn crosstalk between pathways (_e.g. shared genes/reactions_)
+
+Other Useful Ontologies
+========================================================
+
+Navigating Reactome
+- Webpage provides an easy way to access, browse, analyse and download pathway data
+
+<img src="images/reactome_landing_page.png", style="width:600px; height:300px;"></img>
+
+Other Useful Ontologies
+========================================================
+
+Navigating Reactome
+- Pathway browser
+
+<img src="images/reactome_browser.png", style="width:1200px; height:500px;"></img>
+
+Other Useful Ontologies
+========================================================
+
+Navigating Reactome
+- Pathway Structure
+
+<img src="reactome_hierarchy.png", style="width:1200px; height:500px;"></img>
+
+Other Useful Ontologies
+========================================================
+
+Molecular Signatures Database ([MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/collection_details.jsp))
+- Hallmark genesets
+- Canonical pathways
+- Regulatory Target genesets
+- disease genesets
+- many cancer sets
+- Gene Ontology
+
+Finally: On the misuse of Ontologies in the Biomedical Literature
+========================================================
+
+Common issues
+
+_<blockquote>lack of methodological detail and errors in statistical analysis were widespread, which undermines ... reliability and reproducibility</blockquote>_
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+First some general stats
+========================================================
+
+<center>
+![](images/GO_usage_stats.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+Misuse of Ontologies in the Biomedical Literature
+========================================================
+
+Define the gene set and version!
+
+- ENSEMBL? ENTREZ? ...
+
+<center>
+![](images/gene_set_defined.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+Misuse of Ontologies in the Biomedical Literature
+========================================================
+
+Perform FDR correction
+
+<center>
+![](images/fdr_correction_performed.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+Misuse of Ontologies in the Biomedical Literature
+========================================================
+
+<center>
+![](images/app_version.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+Misuse of Ontologies in the Biomedical Literature
+========================================================
+
+Specify your **_background list_**
+<center>
+![](images/bkg_list_specified.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+Misuse of Ontologies in the Biomedical Literature
+========================================================
+
+Make your **_code available_** to the community
+
+<center>
+![](images/code_avail.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+The Good, the Bad, and the Ugly
+========================================================
+
+<center>
+![](images/journal_metrics.png)
+</center>
+
+<small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
+
+
+Example of effective use GO enrichment
+========================================================
+
+**Figure 7 from Smillie _et al._, 2019**
+["Intra- and Inter-cellular Rewiring of the Human Colon during Ulcerative Colitis"](https://www.sciencedirect.com/science/article/pii/S0092867419307329#figs1)
+![](images/1-s2.0-S0092867419307329-gr7.jpg)
+
+The End
+========================================================
+
+<center>
+![](images/maxresdefault.jpg)
+</center>

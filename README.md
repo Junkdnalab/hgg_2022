@@ -120,9 +120,23 @@ incomplete grade.
 #### Thursday, March 31  *Modeling count data* (Hazelett)
 
 **Lecture topics:** 
-- Probability, NGS and generative modeling
-- Gene Ontology (GO) & Pathway Analysis, David,
-- GoRilla, GENAVI. Gene Set Enrichment Analysis (GSEA) and MSigDB.
+- Experimental Design
+- Management of Big Data Projects
+- Biological Enrichment
+- Use (and Misuse) of Ontologies and Their Significance
+
+**Lecture slides:**
+[Lecture 06](https://junkdnalab.github.io/hgg_2022/lecture%206/bioinformatics_enrichment_ontology.html)
+
+**Readings**
+
+[All Biology is Computational Biology](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2002050)
+[Ten Simple Rules for Large Scale Data Processing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757)
+[Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)
+
+**Homework Assignment 4:**
+
+[Due April 7](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)
 
 #### Tuesday, April 5 *RNA seq analysis* (Coetzee)
 
@@ -164,8 +178,8 @@ TBD
 | Thu | 03/17 | HAZELETT  |      |      |
 | Tue | 03/22 | COETZEE   | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html) | 03/29 |
 | Thu | 03/24 | COETZEE   | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html) | 03/31 |
-| Tue | 03/29 | COETZEE   | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw2.html) | 04/05     |
-| Thu | 03/31 | HAZELETT  |      |      |
+| Tue | 03/29 | COETZEE   | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw3.html) | 04/05 |
+| Thu | 03/31 | HAZELETT  | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html) | 04/07 |
 | Tue | 04/05 | COETZEE   |      |      |
 | Thu | 04/07 | COETZEE   |      |      |
 | Tue | 04/12 | HAZELETT  |      |      |
