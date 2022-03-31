@@ -1,0 +1,376 @@
+---
+title: "hw4"
+author: "Dennis J. Hazelett"
+date: '2022-03-31'
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+course_directory <- file.path(Sys.getenv("HOME"),  "repos", "hgg_2022") # change this line to reflect your local environment!
+library(ggplot2)
+library(ggthemes)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(root.dir = course_directory)
+```
+
+## Objective
+
+- practice enrichment calculations
+- gain a deeper understanding of GSEA through simulation
+
+
+### Exercise 1:
+
+Suppose there is a genome with 20,051 genes. You've just completed an RNA-seq cell-culture study in which you found 283 genes were up-regulated in response to application of a drug. Of these genes, 6 belong to a molecular pathway "Response to hypoxia" that also contains an additional 48 genes. You would like to determine whether this constitutes enrichment.
+
+#### Question 1.1
+
+Is the probability of drawing a gene from this pathway known?
+
+<span style="color:#31a354"><i><b>
+Your answer here.
+</b></i></span>
+
+#### Question 1.2
+
+This enrichment calculation involves (highlight the correct answer in red)
+
+<span style="color:#31a354"><i><b>
+a. A finite population of known size and composition.
+</b></i></span>
+
+<span style="color:#31a354"><i><b>
+b. Estimation of probability from the beta distribution.
+</b></i></span>
+
+#### Question 1.3
+
+What method (test) can you use to calculate enrichment in this case?
+
+<span style="color:#31a354"><i><b>
+Your answer here.
+</b></i></span>
+
+#### Question 1.4
+
+Please perform an appropriate calculation using the method you chose in answer to question 1.3 below:
+
+```{r q1.4, echo=TRUE}
+########  enter your code below, do not erase this line
+
+########  do not erase this line
+```
+
+### Exercise 2
+
+Suppose your lab burns down before you could finish the experiment and you only have a single replicate. One candidate gene of interest, `drg-1` (drug response gene 1), has the following expression data (as raw counts).
+
+|           | drg-1 | library depth |
+| :-------- | :---- | :------------ |
+| treatment | 493   | 43170301      |
+| control   | 410   | 58456291      |
+
+#### Question 2.1
+
+What is the range of credible CPM of the gene in the _treatment_ replicate, with $95\%$ confidence? (Hint: use the beta distribution (rbeta function) to determine probability mass and then use the quantile function to set the bounds on $2.5\%$ and $97.5\%$ quantiles. Don't forget to convert units to CPM)
+
+```{r q2.1, echo=TRUE}
+########  enter your code below, do not erase this line
+
+########  do not erase this line
+```
+
+
+#### Question 2.2
+
+What is the _expression difference_ between treatment and control, with $95\%$ confidence interval, in CPM?
+
+```{r q2.2, echo=TRUE}
+########  enter your code below, do not erase this line
+
+########  do not erase this line
+```
+
+#### Question 2.3
+
+What is the epression/$95\%$ _confidence interval_ expressed in $log_{2} FC$?
+
+```{r q2.3, echo=TRUE}
+########  enter your code below, do not erase this line
+
+########  do not erase this line
+```
+
+
+### More Practice:
+
+#### Question 3
+
+A deck of cards contains 52 cards with an even split of 13 cards for 4 different suits (hearts, spades, diamonds, clubs). 
+
+3a. What is the probability of obtaining 5 club-suit cards in 5 draws from two decks of cards? Assume the decks are extensively shuffled together. Comment your answers in the code block and show all calculations.
+
+```{r exercise1a, echo=TRUE, eval=TRUE}
+# answers here
+```
+
+3b. Is the probability different for a single deck, and if so what is it? Comment your answers in the code block and show all calculations.
+
+```{r exercise1b, echo=TRUE, eval=TRUE}
+# answers here
+```
+
+#### Exercise 4
+
+Two exactly identical fishing boats go out on the same day, one on the north of an island, another on the south of the island. They each catch primarily two species of fish, Ladyfish which are known to be ubiquitous in distribution (equally present everywhere), and Garibaldi for which the distribution is not known at this location. The two boats fish until their nets are full:
+
+boat1 (north): 16 Garibaldis, 2,438 Ladyfish
+boat2 (south): 3 Garibaldis, 3,113 Ladyfish
+
+4a. What is a plausible range (95% confidence) of values for the relative **fraction** of Garibaldi on the south vs. the north side? Comment your answers in the code block and show all calculations.
+
+```{r exercise2a, echo=TRUE, eval=TRUE}
+# answers here
+```
+
+4b. Can you confidently state that there is a difference in the distribution of Garibaldi on the South vs. the North, and how likely is it that there is or isn't a difference (specifically what is the p-value)? Comment your answers in the code block and show all calculations.
+
+```{r exercise2b, echo=TRUE, eval=TRUE}
+# answers here
+```
+
+## Simulated GSEA
+
+In the following code block, we are simulating a ranked genelist with enrichment in the top part of the list. In our simulation, we want to look at how parameters such as  enrichment cutoff and magnitude affect the resulting GSEA graph.
+
+Take some time to review the code below:
+
+```{r basemodel, eval=FALSE}
+
+# define parameters:
+ngenes <- 2e4                       # total number of genes
+cutoff <- round(ngenes / 10, 0)     # number of top ranked genes with enrichment (default here 1/5 of genes)
+pathway_genes <- 50                 # number of genes in pathway
+baseline <- pathway_genes / ngenes  # the baseline is the fraction of total genes in pathway of interest, i.e. the expect frequency with no enrichment
+enrich <- baseline * 5.5              # probability of pathway genes in top list
+
+# simulate a dataset:
+if (enrich > 1) {warning("total enrichment probability is greater than 100%")}
+if (baseline * cutoff < 1) {print("WARNING: baseline probability is too low")}
+
+# First, we create the top ranked genes in our list, which are enriched by the factor `enrich`
+top <- sample(c(rep(0, round((1-enrich) * cutoff, 0)), rep(1, round(enrich * cutoff))), 
+              size = cutoff, 
+              replace = F)
+
+# Then, we will generate the rest of the list, which has the remaining genes in our pathway of interest
+if (sum(top) <= baseline * ngenes) {
+  bot <- sample(c(rep(0, round((1-baseline) * (ngenes - cutoff), 0) + sum(top)), 
+                  rep(1, round(ngenes * baseline, 0) - sum(top))),
+                size = ngenes-cutoff, replace = F)
+  ranked_list <- c(top, bot)
+
+  ## create a vector to store enrichment scores:
+  escore <- numeric(ngenes)
+
+  ## iterate enrichment scores over the ranked list of genes:      ###############
+  running_sum <- 0                                                 # Answer      #
+  for (i in 1:ngenes) {                                            # question 53 #
+    ## the expected number of genes changes with each iteration    # from this   #
+    expected = baseline * i                                        # block of    #
+    ## ENRICHMENT FUNCTION:                                        # code!       #
+    running_sum <- running_sum + ranked_list[i]                    #             #
+    escore[i] <- running_sum - expected                            #             #
+  }                                                                ###############
+  
+  # visualize the results:
+  plot(x=1:ngenes, y=escore, type='l', ylim=c(-max(abs(escore)), max(abs(escore))))
+  abline(h=0)
+  points(x = which(as.logical(ranked_list)), y = rep(-max(abs(escore)), sum(ranked_list)))
+} else {print("COULD NOT EVAL: NUM HITS IN TOP LIST GREATER THAN PATHWAY")}
+```
+
+#### Question 5
+
+In your own words, describe how the enrichment function function works. 
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
+
+With the current settings, what fold-enrichment is there and for how many genes? This is a simulated dataset so these values are defined somewhere in the code block.
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
+
+### Question 5.2
+
+- Execute the code several more times by clicking the green arrow in the upper right of the code block in rstudio. Would you characterize the resulting graph as stable?
+
+- Try varying the cutoff parameter to increase or decrease the fraction of the list with probable enrichment. At what number does it become stable (_i.e._ consistently shows enrichment)? What effect does list length (the cutoff parameter) have on your ability to detect enrichment?
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
+
+## Exercise 6
+
+Suppose we wanted to add a p-value calculation to GSEA using Fisher's exact test, using the code block below. <span style="color:red"><i><b>WARNING: THIS IS NOT HOW SIGNIFICANCE IS CALCULATED IN GSEA. IT IS FOR EXPLORATION PURPOSES ONLY.</b></i></span>
+
+
+```{r pvalues, eval=FALSE}
+
+# define parameters:
+ngenes <- 2e4 # total number of genes
+cutoff <- round(ngenes / 5, 0) # number of top ranked genes with enrichment (default here 1/5 of genes)
+pathway_genes <- 50 # number of genes in pathway
+baseline <- pathway_genes/ngenes # fraction of total genes in pathway of interest
+enrich <- baseline * 4 # probability of pathway genes in top list
+
+# simulate a dataset:
+if (enrich > 1) {warning("total enrichment probability is greater than 100%")}
+if (baseline * cutoff < 1) {print("WARNING: baseline probability is too low")}
+
+top <- sample(c(rep(0, round((1 - enrich) * cutoff, 0)), 
+                rep(1, round(enrich * cutoff, 0))), 
+              size = cutoff, 
+              replace = F)
+
+if (sum(top) <= baseline * ngenes) {
+  bot <- sample(c(rep(0, round((1-baseline) * (ngenes - cutoff), 0) + sum(top)), 
+                  rep(1, round(ngenes * baseline, 0) - sum(top))),
+                size = ngenes-cutoff, 
+                replace = F)
+  ranked_list <- c(top, bot)
+
+  ## create vectors to store enrichment scores and pvals:
+  escore <- numeric(ngenes)
+  epval  <- numeric(ngenes)
+  
+  ## iterate enrichment scores over the ranked list of genes:
+  running_sum <- 0
+  for (i in 1:ngenes) {
+    expected = round(baseline * i, 0)
+    ## ENRICHMENT FUNCTION:
+    running_sum <- running_sum + ranked_list[i]
+    escore[i] <- running_sum - expected
+    ### uncomment this section for exercise 6.2
+    # epval[i] <- phyper(
+    #   ## REMINDER! the upper tail is non-inclusive
+    #   q = # enter code here & uncomment,
+    #   m = # enter code here & uncomment,
+    #   n = # enter code here & uncomment,
+    #   k = # enter code here & uncomment,
+    #   lower.tail = # enter code here & uncomment,
+    #   log.p = # enter code here & uncomment
+    # )
+  }
+  
+  # visualize the results:
+  plot(x=1:ngenes, y=escore, type='l', ylim=c(-max(abs(escore)), max(abs(escore))))
+  abline(h=0)
+  points(x = which(as.logical(ranked_list)), y = rep(-max(abs(escore)), sum(ranked_list)))
+} else {print("COULD NOT EVAL: NUM HITS IN TOP LIST GREATER THAN PATHWAY")}
+```
+
+### 6.1
+
+Alter the code block above with some parameters (i.e. `cutoff` and `enrich`) that appear to show clear enrichment from exercises 5.2 & 5.3.
+
+### 6.2
+
+Fix the part of the code pertaining to the pvalue calculation by adding arguments to the phyper function. Take a minute to review the code block below. After running the code below, are any of the calculated p values "significant"? 
+
+```{r significance1, eval=FALSE}
+print(cutoff)
+print(min(which(escore == max(escore))))
+print(epval[min(which(escore == max(escore)))])
+```
+
+### 6.3 
+
+After running the code above, are any of the calculated p values "significant"? 
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
+
+### 6.4 
+
+What do the three values tell you? Are you surprised by the second result? What conclusions can you draw? Is there a strong relationship between the cutoff and the highest point of enrichment?
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
+
+## Exercise 7 Significance Calculation
+
+Let's define a function to simulate a randomized dataset with the same general properties as defined above.
+
+```{r random-gsea-function}
+
+## calculates the maximum enrichment score of a random datasdet
+randscore <- function(ngenes, baseline) {
+  genes <- c(rep(1, round(baseline * ngenes, 0)), rep(0, ngenes-round(baseline*ngenes, 0)))
+  ranked_random_geneset <- sample(genes, size = ngenes, replace = F)
+  escore <- numeric(ngenes)
+  running_sum <- 0
+  tally <- 0
+  for (i in 1:ngenes) {
+    expected = round(baseline * i, 0)
+    running_sum <- running_sum + ranked_random_geneset[i]
+    ## ENRICHMENT FUNCTION:
+    escore[i] <- running_sum - expected
+  }
+  max(escore)
+}
+
+```
+
+We can use this function to permute the range of scores we can expect with a pathway of size `ngenes * baseline`:
+
+```{r permute-distrib, eval=F}
+permutations <- 1000
+trialdata <- numeric(permutations)
+  
+print("This may take a while!.......")
+for (i in 1:permutations) {
+  trialdata[i] <- randscore(ngenes = ngenes, baseline = baseline)
+  if (i %% 100 == 0) print(i)
+}
+
+sigcount <- numeric(permutations)
+for (i in 1:permutations) {sum(trialdata[i] > escore)}
+sum(sigcount) / permutations
+
+trialdata <- data.frame(
+  trialnum = 1:permutations,
+  maxscore = trialdata)
+
+ggplot(trialdata, aes(x=maxscore)) + geom_histogram() + theme_minimal()
+
+```
+
+### 7.1
+
+How does your `max(escore)` (from the graph in exercise 6) compare to this histogram?
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
+
+### 7.2
+
+Calculate a P-value. To do this, quantify the number of random scores ≥ to your `max(escore)` value and divide by the number of permutations:
+
+```{r calc-gsea-pval}
+### your code here
+```
+
+A major caveat is that this p-value only has as much resolution as 1 ÷ the number of permutations. Therefore if your answer above is equivalent to `0`, how would you state the p value for accuracy? (_i.e._ $p < ?$)
+
+<span style="color:#31a354"><i><b>
+answer here
+</b></i></span>
