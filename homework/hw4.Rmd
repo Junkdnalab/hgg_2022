@@ -105,17 +105,17 @@ What is the epression/$95\%$ _confidence interval_ expressed in $log_{2} FC$?
 
 ### More Practice:
 
-#### Question 3
+#### Exercise 3
 
 A deck of cards contains 52 cards with an even split of 13 cards for 4 different suits (hearts, spades, diamonds, clubs). 
 
-3a. What is the probability of obtaining 5 club-suit cards in 5 draws from two decks of cards? Assume the decks are extensively shuffled together. Comment your answers in the code block and show all calculations.
+3.1 What is the probability of obtaining 5 club-suit cards in 5 draws from two decks of cards? Assume the decks are extensively shuffled together. Comment your answers in the code block and show all calculations.
 
 ```{r exercise1a, echo=TRUE, eval=TRUE}
 # answers here
 ```
 
-3b. Is the probability different for a single deck, and if so what is it? Comment your answers in the code block and show all calculations.
+3.2 Is the probability different for a single deck, and if so what is it? Comment your answers in the code block and show all calculations.
 
 ```{r exercise1b, echo=TRUE, eval=TRUE}
 # answers here
@@ -128,19 +128,21 @@ Two exactly identical fishing boats go out on the same day, one on the north of 
 boat1 (north): 16 Garibaldis, 2,438 Ladyfish
 boat2 (south): 3 Garibaldis, 3,113 Ladyfish
 
-4a. What is a plausible range (95% confidence) of values for the relative **fraction** of Garibaldi on the south vs. the north side? Comment your answers in the code block and show all calculations.
+4.1 What is a plausible range (95% confidence) of values for the relative **fraction** of Garibaldi on the south vs. the north side? Comment your answers in the code block and show all calculations.
 
 ```{r exercise2a, echo=TRUE, eval=TRUE}
 # answers here
 ```
 
-4b. Can you confidently state that there is a difference in the distribution of Garibaldi on the South vs. the North, and how likely is it that there is or isn't a difference (specifically what is the p-value)? Comment your answers in the code block and show all calculations.
+4.2 Can you confidently state that there is a difference in the distribution of Garibaldi on the South vs. the North, and how likely is it that there is or isn't a difference (specifically what is the p-value)? Comment your answers in the code block and show all calculations.
 
 ```{r exercise2b, echo=TRUE, eval=TRUE}
 # answers here
 ```
 
 ## Simulated GSEA
+
+Exercise 5
 
 In the following code block, we are simulating a ranked genelist with enrichment in the top part of the list. In our simulation, we want to look at how parameters such as  enrichment cutoff and magnitude affect the resulting GSEA graph.
 
@@ -191,9 +193,9 @@ if (sum(top) <= baseline * ngenes) {
 } else {print("COULD NOT EVAL: NUM HITS IN TOP LIST GREATER THAN PATHWAY")}
 ```
 
-#### Question 5
+### 
 
-In your own words, describe how the enrichment function function works. 
+Question 5.1 In your own words, describe how the enrichment function function works. 
 
 <span style="color:#31a354"><i><b>
 answer here
@@ -217,13 +219,13 @@ answer here
 
 ## Exercise 6
 
-Suppose we wanted to add a p-value calculation to GSEA using Fisher's exact test, using the code block below. <span style="color:red"><i><b>WARNING: THIS IS NOT HOW SIGNIFICANCE IS CALCULATED IN GSEA. IT IS FOR EXPLORATION PURPOSES ONLY.</b></i></span>
+Suppose we wanted to add a p-value calculation to GSEA using the hypergeometric distribution, using the code block below. <span style="color:red"><i><b>WARNING: THIS IS NOT HOW SIGNIFICANCE IS CALCULATED IN GSEA. IT IS FOR EXPLORATION PURPOSES ONLY.</b></i></span>
 
 
 ```{r pvalues, eval=FALSE}
 
 # define parameters:
-ngenes <- 2e4 # total number of genes
+ngenes <- 7e3 # total number of genes
 cutoff <- round(ngenes / 5, 0) # number of top ranked genes with enrichment (default here 1/5 of genes)
 pathway_genes <- 50 # number of genes in pathway
 baseline <- pathway_genes/ngenes # fraction of total genes in pathway of interest
@@ -277,11 +279,11 @@ if (sum(top) <= baseline * ngenes) {
 
 ### 6.1
 
-Alter the code block above with some parameters (i.e. `cutoff` and `enrich`) that appear to show clear enrichment from exercises 5.2 & 5.3.
+Fix the part of the code pertaining to the pvalue calculation by adding arguments to the phyper function. Rerun the "pvalues" code block above to verify that it works
 
 ### 6.2
 
-Fix the part of the code pertaining to the pvalue calculation by adding arguments to the phyper function. Take a minute to review the code block below. After running the code below, are any of the calculated p values "significant"? 
+Run the code block below. Are any of the calculated p values "significant"? 
 
 ```{r significance1, eval=FALSE}
 print(cutoff)
@@ -289,17 +291,13 @@ print(min(which(escore == max(escore))))
 print(epval[min(which(escore == max(escore)))])
 ```
 
-### 6.3 
-
-After running the code above, are any of the calculated p values "significant"? 
-
 <span style="color:#31a354"><i><b>
 answer here
 </b></i></span>
 
-### 6.4 
+### 6.3
 
-What do the three values tell you? Are you surprised by the second result? What conclusions can you draw? Is there a strong relationship between the cutoff and the highest point of enrichment?
+What do the three values returned in 6.2 tell you? What is your conclusion?
 
 <span style="color:#31a354"><i><b>
 answer here
@@ -369,7 +367,7 @@ Calculate a P-value. To do this, quantify the number of random scores ≥ to you
 ### your code here
 ```
 
-A major caveat is that this p-value only has as much resolution as 1 ÷ the number of permutations. Therefore if your answer above is equivalent to `0`, how would you state the p value for accuracy? (_i.e._ $p < ?$)
+A caveat is that this p-value only has the resolution 1 ÷ the number of permutations. If your answer above was `0`, how would you state the p value for accuracy? (_i.e._ $p < ?$)
 
 <span style="color:#31a354"><i><b>
 answer here
