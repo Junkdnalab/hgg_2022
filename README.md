@@ -138,7 +138,7 @@ incomplete grade.
 
 [Due April 5](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)
 
-#### Thursday, March 31 *Modeling count data* (Hazelett)
+#### Thursday, March 31 *Experimental Design, Enrichment and GO* (Hazelett)
 
 **Lecture topics:**
 
@@ -147,7 +147,9 @@ incomplete grade.
 -   Biological Enrichment
 -   Use (and Misuse) of Ontologies and Their Significance
 
-**Lecture slides:** [Lecture
+**Lecture slides:** 
+
+[Lecture
 06](https://junkdnalab.github.io/hgg_2022/lecture%206/bioinformatics_enrichment_ontology.html)
 
 **readings:**
@@ -191,7 +193,9 @@ Adding, committing, and pull requests
 
 16S rRNA sequence data processing and analysis
 
-**Homework Assignment :** Follow and complete the tutorial for [dada2](https://benjjneb.github.io/dada2/tutorial.html) prior to April 14
+**Homework Assignment :** Follow and complete the tutorial for
+[dada2](https://benjjneb.github.io/dada2/tutorial.html) prior to April
+14
 
 #### Tuesday, April 19 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
@@ -201,17 +205,17 @@ TBD
 
 ### Schedule and Due Dates:
 
-| day | date  | lecturer        | hmwk                                                           | due   |
-|:----|:------|:----------------|:---------------------------------------------------------------|:------|
-| Tue | 03/15 | HAZELETT        |                                                                |       |
-| Thu | 03/17 | HAZELETT        |                                                                |       |
-| Tue | 03/22 | COETZEE         | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html) | 03/29 |
-| Thu | 03/24 | COETZEE         | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html) | 03/31 |
-| Tue | 03/29 | COETZEE         | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw3.html) | 04/05 |
-| Thu | 03/31 | HAZELETT        | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html) | 04/07 |
-| Tue | 04/05 | COETZEE         |                                                                |       |
-| Thu | 04/07 | COETZEE         |                                                                |       |
-| Tue | 04/12 | HAZELETT        |                                                                |       |
-| Thu | 04/14 | VUJKOVIC-CVIJIN |                                                                |       |
-| Tue | 04/19 | LAWRENSON       |                                                                |       |
-| Thu | 04/21 | URBANOWICZ      |                                                                |       |
+| day | date  | lecturer        | hmwk                                                             | due   |
+|:----------|:----------|:----------|:---------------------------|:----------|
+| Tue | 03/15 | HAZELETT        | | |
+| Thu | 03/17 | HAZELETT        | | |
+| Tue | 03/22 | COETZEE         | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)   | 03/29 |
+| Thu | 03/24 | COETZEE         | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html)   | 03/31 |
+| Tue | 03/29 | COETZEE         | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)   | 04/05 |
+| Thu | 03/31 | HAZELETT        | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)   | 04/07 |
+| Tue | 04/05 | COETZEE         | | |
+| Thu | 04/07 | COETZEE         | | |
+| Tue | 04/12 | HAZELETT        | | 04/21 |
+| Thu | 04/14 | VUJKOVIC-CVIJIN | [dada2 tutorial](https://benjjneb.github.io/dada2/tutorial.html) | 04/14 |
+| Tue | 04/19 | LAWRENSON       | | |
+| Thu | 04/21 | URBANOWICZ      | | |

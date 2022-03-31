@@ -52,7 +52,7 @@ Bioinformatics, Computational, & Systems Biology
 ========================================================
 
 <center>
-![](images/foamtree.png)
+<img src="images/foamtree.png" height=700>
 </center>
 
 Bioinformatics, Computational, & Systems Biology
@@ -69,9 +69,9 @@ Bioinformatics, Computational, & Systems Biology
 
 Computational Biology: The application of mathematical models involving (formerly) prohibitive computational infrastructure as a general approach to drawing integrated inferences about biological questions
 
-
-<img src="images/compbio1_xkcd.png" height=400></img>
-
+<center>
+<img src="images/compbio1_xkcd.png" height=700></img>
+</center>
 
 <small>source: Randall Munroe's [XKCD comic strip (link)](https://xkcd.com/1605/)</small>
 
@@ -88,7 +88,7 @@ Bioinformatics, Computational, & Systems Biology
 _<blockquote>"The next modern synthesis in biology will be driven by the absorption of mathematical, statistical, and computational methods into mainstream biological training."</blockquote>_
 
 <center>
-![](images/all_biology_is_compbio.png)
+<img src="images/all_biology_is_compbio.png">
 </center>
 
 [source: Markowetz 2017](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2002050)
@@ -106,7 +106,7 @@ Experimental Design is the Key to Success!
 
 - choice of cell lines or living models
 
-<center><img src="images/Adding-Cell-Culture-to-a-Cell-Dish.jpg" height=400></img></center>
+<center><img src="images/Adding-Cell-Culture-to-a-Cell-Dish.jpg" height=700></img></center>
 
 Experimental Design is the Key to Success!
 ========================================================
@@ -142,21 +142,21 @@ ENCODE CRISPR knockout of TFs in K562 cells
 ========================================================
 
 <center>
-<img src="images/ordered_crispri-plot-1.png"></img>
+<img src="images/ordered_crispri-plot-1.png" height=1000></img>
 </center>
 
-ENCODE CRISPR knockout of TFs in K562 cells
+ENCODE CRISPRi knockdown of TFs in K562 cells
 ========================================================
 
 <center>
-![](images/encode_expt_design.png)
+<img src="images/encode_expt_design.png" height=800>
 </center>
 
-ENCODE CRISPR knockout of TFs in K562 cells
+ENCODE CRISPRi knockdown of TFs in K562 cells
 ========================================================
 
 <center>
-<img src="images/pooled_design.png" height=600></img>
+<img src="images/pooled_design.png" height=900></img>
 </center>
 
 Experimental Design is the Key
@@ -186,7 +186,7 @@ Library Complexity in experimental design
 ========================================================
 
 <center>
-![](images/complexity_graph.png)
+<img src="images/complexity_graph.png" height=800>
 </center>
 
 <small>From: Predicting the molecular complexity of sequencing libraries, [Daley & Smith; Nature Methods 2013 PMID: 23435259](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3612374/)</small>
@@ -197,14 +197,14 @@ Library Complexity in experimental design
 why sequencing depth matters
 
 <center>
-![](images/ordered_crispri-plot-1.png)
+<img src="images/ordered_crispri-plot-1.png" height=1000>
 </center>
 
 Management of Big Data Projects
 ========================================================
 
 <center>
-<img src="images/tcga_omics.png" height=600>
+<img src="images/tcga_omics.png" height=1000>
 </center>
 
 <small>from "The Cancer Genome Atlas Pancancer Analysis Project, [Nature Genetics 2013](https://www.nature.com/articles/ng.2764)</small>
@@ -215,7 +215,7 @@ Management of Big Data Projects
 **_Don't reinvent the wheel!_**
 
 <center>
-<img src="images/wheel_gary_larson.png" height=500>
+<img src="images/wheel_gary_larson.png" height=800>
 </center>
 
 <small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757) and "The Far Side" by Gary Larson</small>
@@ -226,7 +226,7 @@ Management of Big Data Projects
 **_Document EVERYTHING_**
 
 <center>
-![](images/mw1920_internal-asset1-36.png)
+<img src="images/mw1920_internal-asset1-36.png" height=800>
 </center>
 
 <small>[BIT.AI Blog](https://blog.bit.ai/technical-documentation/)</small>
@@ -267,7 +267,7 @@ Management of Big Data Projects
 **_Automate your workflows_**
 
 <center>
-<img src="images/1913-December-18-Rube-Goldberg-machine-cartoon-beer-bottle-opener.jpg" height=500>
+<img src="images/1913-December-18-Rube-Goldberg-machine-cartoon-beer-bottle-opener.jpg" height=950>
 </center>
 
 <small>from: "Ten Simple Rules for Large Scale Data Processing" [Fungtammasan _et al._, 2022](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009757) and [the Norman Rockwell Museum](https://www.nrm.org/2018/11/the-art-and-wit-of-rube-goldberg/)</small>
@@ -287,13 +287,13 @@ Management of Big Data Projects
 - Sanity Checks!!
 
 <center>
-<img src="images/sanity_checks.jpg" height=500>
+<img src="images/sanity_checks.jpg" height=800>
 </center>
 
 Biological Enrichment
 ========================================================
 
-We hear this term of art _constantly_ throughout biology, molecular biology, genomics & especially bioinformatics.
+_...is a ubiquitous concept of biology, molecular biology, genomics & especially bioinformatics._
 
 
 Why enrichment?
@@ -302,7 +302,7 @@ Why enrichment?
 ### ENRICHMENT IS **evidence for organized activity**
 
 <center>
-<img src="images/fish_school.jpg" height=500>
+<img src="images/fish_school.jpg" height=900>
 </center>
 
 What is enrichment?
@@ -321,7 +321,7 @@ Calculating enrichment
 ========================================================
 
 <center>
-<img src="images/bw_marbles.jpg">
+<img src="images/bw_marbles.jpg" height=800>
 </center>
 
 Calculating enrichment
@@ -347,7 +347,7 @@ Calculating enrichment
 
 - finite number of marbles
 - known number of blacks & whites
-- therefore probabilities are known p_white, p_black
+- therefore probabilities are known p(white | _m_), p(black | _n_)
 
 Calculating enrichment
 ========================================================
@@ -363,7 +363,7 @@ If we select a single marble, the probabilities change
 
 m = 15, n = 45
 
-draw1: p_m = 15 / 15 + 45
+draw1: p_m = 15 / (15 + 45)
 ```{r draw-one, echo = FALSE}
 round(15/60, 2)
 ```
@@ -375,11 +375,11 @@ If we select a single marble, the probabilities change
 
 m = 15, n = 45
 
-draw1: p_m = 15 / 15 + 45
+draw1: p_m = 15 / (15 + 45)
 ```{r draw-one-b, echo = FALSE}
 round(15/60, 2)
 ```
-draw2: p_m = 14 / 14 + 45
+draw2: p_m = 14 / (14 + 45)
 ```{r draw-two, echo = FALSE}
 round(14/59, 3)
 ```
@@ -443,7 +443,8 @@ ggplot(pmfprobs[pmfprobs$k %in% c(1, 10, 20, 30, 40, 50, 59),]) +
   xlab("successes")
   theme_minimal() +
   theme(text = element_text(size=24)) +
-  ggtitle("Probability Mass Function (m=15, n=45)")
+  ggtitle("Probability Mass Function (m=15, n=45)") + theme_minimal()
+  
 ```
 
 Hypergeometric distribution
@@ -482,9 +483,11 @@ class: small-code
 phyper(q, m, n, k, lower.tail = FALSE, log.p = FALSE)
 ```
 
-Hypergeometric distribution: code
+Hypergeometric distribution:
 ========================================================
 class: small-code
+
+_k_ = 28 draws (_m_=15, _n_=45)
 
 ```{r hyper-graph, echo = FALSE, results = 'hide'}
 mydat <- pmfprobs[pmfprobs$k == 28,]
@@ -499,9 +502,11 @@ ggplot(mydat) +
   ggtitle("Probability Mass Function (m=15, n=45)")
 ```
 
-Hypergeometric distribution: code
+Hypergeometric distribution:
 ========================================================
 class: small-code
+
+_k_ = 28 draws (_m_=15, _n_=45)
 
 ```{r hyper-graph-tail, echo = FALSE, results = 'hide'}
 mydat <- pmfprobs[pmfprobs$k == 28,]
@@ -638,15 +643,49 @@ class: small-code
 
 What is the probability of finding a read in a given gene (random draw), given the data
 
-```{r beta-rna-seq}
+```{r coin-flip}
+set.seed(4)
+credible_expression <- rbeta(20, 4, 6)
+plot(density(credible_expression), xlim=c(0,1))
+abline(v=0.5, lty=3, col="red")
+```
+
+```{r cred_expr_result, echo = FALSE}
+paste("mean", signif(mean(credible_expression, ), 2))
+```
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+What is the probability of finding a read in a given gene (random draw), given the data
+
+```{r coin-flip2}
+credible_expression <- rbeta(10000, 4, 6)
+plot(density(credible_expression), xlim=c(0,1))
+abline(v=0.5, lty=3, col="red")
+```
+
+```{r cred_expr_result2, echo = FALSE}
+paste("mean", signif(mean(credible_expression, ), 2))
+```
+
+General Enrichment Calculation
+========================================================
+class: small-code
+
+What is the probability of finding a read in a given gene (random draw), given the data
+
+```{r beta-rna-seq-cpm}
 credible_expression <- rbeta(1e5, 234, 4e7)
 cpm <- credible_expression * 1e6
-plot(density(cpm), xlim=c(0,100))
+plot(density(cpm), xlim=c(0,20))
 ```
 
 ```{r cpm-result, echo = FALSE}
 paste(round(mean(cpm), 1), "cpm")
 ```
+
 
 General Enrichment Calculation
 ========================================================
@@ -743,7 +782,7 @@ General Enrichment Calculation: Applications
 Gene Set Enrichment
 ========================================================
 
-<img src="gsea_plot_example.jpg", style="width:600px;height:520px;"></img>
+<img src="images/gsea_plot_example.jpg" height=600>
 
 Gene Set Enrichment
 ========================================================
@@ -810,7 +849,9 @@ Gene Set Enrichment
 Enrichment in ranked lists
 ========================================================
 
-<img src="marbles_in_a_row.jpeg", style="width:259px;height:194px;"></img>
+<center>
+<img src="images/marbles_in_a_row.jpeg" height=700></img>
+</center>
 
 Online methods
 ========================================================
@@ -821,30 +862,38 @@ Online methods
 How GSEA Works
 ========================================================
 
-shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)
+<small>shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)</small>
 
-<img src="GSEA_1.png", style="width:800px;height:260px;"></img>
-
-How GSEA Works
-========================================================
-
-<img src="GSEA_2.png", style="width:650px;height:400px;"></img>
-
+<img src="images/GSEA_1.png" height=800>
 
 How GSEA Works
 ========================================================
 
-<img src="GSEA_3.png", style="width:650px;height:400px;"></img>
+<img src="images/GSEA_2.png" height=800>
+
+<small>shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)</small>
+
 
 How GSEA Works
 ========================================================
 
-<img src="GSEA_4.png", style="width:650px;height:400px;"></img>
+<img src="images/GSEA_3.png" height=800>
+
+<small>shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)</small>
 
 How GSEA Works
 ========================================================
 
-<img src="GSEA_5.png", style="width:600px;height:500px;"></img>
+<img src="images/GSEA_4.png" height=800>
+
+<small>shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)</small>
+
+How GSEA Works
+========================================================
+
+<img src="images/GSEA_5.png" height=800>
+
+<small>shamelessly stolen from: [Hector Corrada Bravo](http://users.umiacs.umd.edu/~hcorrada/CMSC858B/lectures/lect14/GeneSets.pdf)</small>
 
 Ontologies, their uses and misuses
 ========================================================
@@ -878,27 +927,8 @@ Other Useful Ontologies
 ========================================================
 
   - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
-
-Other Useful Ontologies
-========================================================
-
-  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
   - [Reactome](https://reactome.org/)
-
-Other Useful Ontologies
-========================================================
-
-  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
-  - [Reactome](https://reactome.org/)
-  - [SynGO](https://www.syngoportal.org)
-
-![](images/syngopage1.png)
-
-Other Useful Ontologies
-========================================================
-
-  - Kyoto Encyclopedia of Genes and Genomes   ([Kegg](https://www.genome.jp/kegg/pathway.html))
-  - [Reactome](https://reactome.org/)
+  - [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/)
   - [SynGO](https://www.syngoportal.org)
   - [Panther](http://www.pantherdb.org/panther/ontologies.jsp)
   - [WikiPathways](https://www.wikipathways.org/index.php/WikiPathways)
@@ -906,24 +936,20 @@ Other Useful Ontologies
 Other Useful Ontologies
 ========================================================
 
-[Reactome](https://reactome.org/) is an expert-authored, peer-reviewed knowledgebase of reactions and pathways.
+[Reactome](https://reactome.org/) is an expert-authored, peer-reviewed knowledgebase of reactions and pathways. (now version 79)
 
 <img src="images/reactome_release_info.png";"></img>
 
 - Manually curated human pathways with experimental evidence (regarded highest quality)
 - Manually inferred pathways for other organism (_e.g. Gallus gallus, Mus musculus_)
 
-**Reactome is useful when...**
-- Know molecular details of a pathway based on literature (_e.g. directed pathway_)
-- Learn crosstalk between pathways (_e.g. shared genes/reactions_)
-
 Other Useful Ontologies
 ========================================================
 
 Navigating Reactome
-- Webpage provides an easy way to access, browse, analyse and download pathway data
+- Webpage provides an easy way to access, browse, analyze and download pathway data
 
-<img src="images/reactome_landing_page.png", style="width:600px; height:300px;"></img>
+<img src="images/reactome_landing_page.png" height=400>
 
 Other Useful Ontologies
 ========================================================
@@ -931,7 +957,7 @@ Other Useful Ontologies
 Navigating Reactome
 - Pathway browser
 
-<img src="images/reactome_browser.png", style="width:1200px; height:500px;"></img>
+<img src="images/reactome_browser.png" height=800>
 
 Other Useful Ontologies
 ========================================================
@@ -939,7 +965,7 @@ Other Useful Ontologies
 Navigating Reactome
 - Pathway Structure
 
-<img src="reactome_hierarchy.png", style="width:1200px; height:500px;"></img>
+<img src="images/reactome_hierarchy.png" height=800>
 
 Other Useful Ontologies
 ========================================================
@@ -951,6 +977,12 @@ Molecular Signatures Database ([MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/
 - disease genesets
 - many cancer sets
 - Gene Ontology
+
+Other Useful Ontologies
+========================================================
+  - [SynGO](https://www.syngoportal.org)
+
+<img src="images/syngopage1.png">
 
 Finally: On the misuse of Ontologies in the Biomedical Literature
 ========================================================
@@ -965,7 +997,7 @@ First some general stats
 ========================================================
 
 <center>
-![](images/GO_usage_stats.png)
+<img src="images/GO_usage_stats.png">
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -978,7 +1010,7 @@ Define the gene set and version!
 - ENSEMBL? ENTREZ? ...
 
 <center>
-![](images/gene_set_defined.png)
+<img src="images/gene_set_defined.png">
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -989,7 +1021,7 @@ Misuse of Ontologies in the Biomedical Literature
 Perform FDR correction
 
 <center>
-![](images/fdr_correction_performed.png)
+<img src="images/fdr_correction_performed.png" height=800>
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -998,7 +1030,7 @@ Misuse of Ontologies in the Biomedical Literature
 ========================================================
 
 <center>
-![](images/app_version.png)
+<img src="images/app_version.png" height=800>
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -1008,7 +1040,7 @@ Misuse of Ontologies in the Biomedical Literature
 
 Specify your **_background list_**
 <center>
-![](images/bkg_list_specified.png)
+<img src="images/bkg_list_specified.png" height=800>
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -1019,7 +1051,7 @@ Misuse of Ontologies in the Biomedical Literature
 Make your **_code available_** to the community
 
 <center>
-![](images/code_avail.png)
+<img src="images/code_avail.png" height=700>
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -1028,7 +1060,7 @@ The Good, the Bad, and the Ugly
 ========================================================
 
 <center>
-![](images/journal_metrics.png)
+<img src="images/journal_metrics.png">
 </center>
 
 <small>from Wijesooriya _et al._, 2022 [Urgent need for consistent standards in functional enrichment analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009935)</small>
@@ -1039,11 +1071,11 @@ Example of effective use GO enrichment
 
 **Figure 7 from Smillie _et al._, 2019**
 ["Intra- and Inter-cellular Rewiring of the Human Colon during Ulcerative Colitis"](https://www.sciencedirect.com/science/article/pii/S0092867419307329#figs1)
-![](images/1-s2.0-S0092867419307329-gr7.jpg)
+<img src="images/1-s2.0-S0092867419307329-gr7.jpg" width=800>
 
 The End
 ========================================================
 
 <center>
-![](images/maxresdefault.jpg)
+<img src="images/maxresdefault.jpg" height=1000>
 </center>
