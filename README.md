@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 ## Course Abstract
 
 The goal of this course is to provide students with an overview of the
