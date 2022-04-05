@@ -167,7 +167,11 @@ incomplete grade.
 -   Learning to judge data for quality metrics of RNA-Seq.
 -   Quick differential expression analysis.
 
-**Assignment:** (Question set)
+[Lecture 07](https://junkdnalab.github.io/hgg_2022/lecture%207/quality_control.html)
+
+[Example DE](https://junkdnalab.github.io/hgg_2022/lecture%207/Differential%20Expression%20Analysis%20Examples.html)
+
+[Example MultiQC](https://junkdnalab.github.io/hgg_2022/lecture%207/post_alignment.html)
 
 #### Thursday, April 7*Single Cell analysis* (Coetzee)
 
