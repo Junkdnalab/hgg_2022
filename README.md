@@ -176,6 +176,7 @@ incomplete grade.
 #### Thursday, April 7*Single Cell analysis* (Coetzee)
 
 [Lecture 08](https://junkdnalab.github.io/hgg_2022/lecture%208/scrna_sprint.html)
+[analysis](https://junkdnalab.github.io/hgg_2022/lecture%208/analysis.R)
 
 #### Tuesday, April 12 *Project management and Git* (Hazelett)
 
