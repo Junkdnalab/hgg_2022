@@ -176,7 +176,17 @@ incomplete grade.
 #### Thursday, April 7*Single Cell analysis* (Coetzee)
 
 [Lecture 08](https://junkdnalab.github.io/hgg_2022/lecture%208/scrna_sprint.html)
+
 [analysis](https://junkdnalab.github.io/hgg_2022/lecture%208/analysis.R)
+
+**Readings and websites:**
+
+- [Orchestrating Single-Cell Analysis with Bioconductor (OSCA)](http://bioconductor.org/books/3.14/OSCA/book-contents.html)
+- [Seurat](https://satijalab.org/seurat/)
+- [Scanpy - single cell analysis with python](https://scanpy.readthedocs.io/en/stable/)
+- [scTransform](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1874-1)
+- [Pearson Residuals for Normalization](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02451-7)
+- [GPU - probabilistic models for single-cell omics](https://scvi-tools.org/)
 
 #### Tuesday, April 12 *Project management and Git* (Hazelett)
 

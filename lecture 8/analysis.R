@@ -127,18 +127,13 @@ metadata %>%
   geom_hline(yintercept = 250) +
   facet_wrap(~sample)
 
-# Visualize the correlation between genes detected and number of UMIs and determine whether strong presence of cells with low numbers of genes/UMIs
+# Visualize the distribution of mitochondrial gene expression detected per cell
 metadata %>% 
-  ggplot(aes(x=nUMI, y=nGene, color=mitoRatio)) + 
-  geom_point() + 
-  scale_colour_gradient(low = "gray90", high = "black") +
-  stat_smooth(method=lm) +
+  ggplot(aes(color=sample, x=mitoRatio, fill=sample)) + 
+  geom_density(alpha = 0.2) + 
   scale_x_log10() + 
-  scale_y_log10() + 
   theme_classic() +
-  geom_vline(xintercept = 500) +
-  geom_hline(yintercept = 250) +
-  facet_wrap(~sample)
+  geom_vline(xintercept = 0.2)
 
 # Visualize the overall complexity of the gene expression by visualizing the genes detected per UMI
 metadata %>%
@@ -161,11 +156,11 @@ counts <- GetAssayData(object = filtered_seurat, slot = "counts")
 # Output a logical matrix specifying for each gene on whether or not there are more than zero counts per cell
 nonzero <- counts > 0
 
-# Extract counts
-counts <- GetAssayData(object = filtered_seurat, slot = "counts")
+# Sums all TRUE values and returns TRUE if more than 10 TRUE values per gene
+keep_genes <- Matrix::rowSums(nonzero) >= 10
 
-# Output a logical matrix specifying for each gene on whether or not there are more than zero counts per cell
-nonzero <- counts > 0
+# Only keeping those genes expressed in more than 10 cells
+filtered_counts <- counts[keep_genes, ]
 
 # Reassign to filtered Seurat object
 filtered_seurat <- CreateSeuratObject(filtered_counts, meta.data = filtered_seurat@meta.data)
@@ -215,6 +210,8 @@ for (i in 1:length(split_seurat)) {
   split_seurat[[i]] <- SCTransform(split_seurat[[i]], vars.to.regress = c("mitoRatio"))
 }
 
+unified_seurat <- SCTransform(seurat_phase, vars.to.regress = c("mitoRatio"))
+
 # Check which assays are stored in objects
 split_seurat$ctrl@assays
 
@@ -239,13 +236,12 @@ seurat_integrated <- IntegrateData(anchorset = integ_anchors,
 
 # Run PCA
 seurat_integrated <- RunPCA(object = seurat_integrated)
-seurat_integrated <- RunPCA(object = seurat_phase)
+unified_seurat <- RunPCA(object = unified_seurat)
 
 # Plot PCA
 PCAPlot(seurat_integrated,
         split.by = "sample")  
-
-PCAPlot(seurat_phase,
+PCAPlot(unified_seurat,
         split.by = "sample")  
 
 # Run UMAP
@@ -253,13 +249,13 @@ seurat_integrated <- RunUMAP(seurat_integrated,
                              dims = 1:40,
                              reduction = "pca")
 
-seurat_phase <- RunUMAP(seurat_phase, 
-                        dims = 1:40,
-                        reduction = "pca")
+unified_seurat <- RunUMAP(unified_seurat, 
+                          dims = 1:40,
+                          reduction = "pca")
 
 # Plot UMAP                             
 DimPlot(seurat_integrated)   
-DimPlot(seurat_phase)   
+DimPlot(unified_seurat)   
 
 # Plot UMAP split by sample
 DimPlot(seurat_integrated,
@@ -267,3 +263,4 @@ DimPlot(seurat_integrated,
 
 # Save integrated seurat object
 saveRDS(seurat_integrated, "results/integrated_seurat.rds")
+
