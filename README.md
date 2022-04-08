@@ -206,7 +206,7 @@ Adding, committing, and pull requests
 
 **Homework Assignment :** Follow and complete the tutorial for
 [dada2](https://benjjneb.github.io/dada2/tutorial.html) prior to April
-14
+14. Please also install the following R packages: vegan, phyloseq, lmerTest, lme4, ggplot2, dplyr, ape, reshape2
 
 #### Tuesday, April 19 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
