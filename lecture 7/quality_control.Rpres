@@ -345,7 +345,7 @@ Mapping rate guidelines:
 
 Poor quality reads, contaminating sequences
 
-Inappropriate alignment parameters, or reference gneome/transcriptome
+Inappropriate alignment parameters, or reference genome/transcriptome
 
 
 Low read mapping rate
@@ -356,7 +356,7 @@ Mapping rate guidelines:
 
 Poor quality reads, contaminating sequences
 
-Inappropriate alignment parameters, or reference gneome/transcriptome
+Inappropriate alignment parameters, or reference genome/transcriptome
 
 Low quality reference genome/transcriptome (less relevant for mouse/human)
 

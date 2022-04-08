@@ -1,3 +1,5 @@
+# Intro to Computational Genomics
+
 ## Course Abstract
 
 The goal of this course is to provide students with an overview of the
@@ -157,7 +159,7 @@ incomplete grade.
 
 **Homework Assignment 4:**
 
-[Due April 7](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)
+[Due April 12](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)
 
 #### Tuesday, April 5 *RNA seq analysis* (Coetzee)
 
@@ -175,15 +177,10 @@ incomplete grade.
 
 #### Thursday, April 7*Single Cell analysis* (Coetzee)
 
-#### Tuesday, April 12 *Project management and Git* (Hazelett)
+#### Tuesday, April 12 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
 **Lecture topics:**
 
-What is project management?
-
-Git Basics; creating and cloning a repo
-
-Adding, committing, and pull requests
 
 #### Thursday, April 14 *Microbiome* (Vujkovic-Cvijin)
 
@@ -195,9 +192,17 @@ Adding, committing, and pull requests
 [dada2](https://benjjneb.github.io/dada2/tutorial.html) prior to April
 14
 
-#### Tuesday, April 19 *Bioinformatics for bench scientists* (Guest: Lawrenson)
+#### Tuesday, April 19 *Project management and Git* (Hazelett)
 
-TBD
+- What is project management?
+- Git Basics; creating and cloning a repo
+- Adding, committing, and pull requests
+
+[Lecture 11](https://docs.google.com/presentation/d/1_cATSNGzHAaphTXfKcsJ8SzNST4WQMtsqcbsxTg5VGw/edit?usp=sharing)
+
+**Homework Assignment :** 
+
+Due April 26: Create a private git repo and populate with all prior homework assignments. See lecture slides.
 
 #### Thursday, April 21 *automated machine learning pipelines* Urbanowicz
 
@@ -210,10 +215,10 @@ TBD
 | Tue | 03/22 | COETZEE         | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)   | 03/29 |
 | Thu | 03/24 | COETZEE         | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html)   | 03/31 |
 | Tue | 03/29 | COETZEE         | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)   | 04/05 |
-| Thu | 03/31 | HAZELETT        | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)   | 04/07 |
+| Thu | 03/31 | HAZELETT        | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)   | 04/12 |
 | Tue | 04/05 | COETZEE         | | |
 | Thu | 04/07 | COETZEE         | | |
-| Tue | 04/12 | HAZELETT        | | 04/21 |
+| Tue | 04/12 | LAWRENSON       | | 04/21 |
 | Thu | 04/14 | VUJKOVIC-CVIJIN | [dada2 tutorial](https://benjjneb.github.io/dada2/tutorial.html) | 04/14 |
-| Tue | 04/19 | LAWRENSON       | | |
+| Tue | 04/19 | HAZELETT | see lecture slides | 04/26 |
 | Thu | 04/21 | URBANOWICZ      | | |
