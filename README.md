@@ -177,10 +177,24 @@ incomplete grade.
 
 #### Thursday, April 7*Single Cell analysis* (Coetzee)
 
+[Lecture 08](https://junkdnalab.github.io/hgg_2022/lecture%208/scrna_sprint.html)
+
+[analysis](https://junkdnalab.github.io/hgg_2022/lecture%208/analysis.R)
+
+**Readings and websites:**
+
+- [Orchestrating Single-Cell Analysis with Bioconductor (OSCA)](http://bioconductor.org/books/3.14/OSCA/book-contents.html)
+- [Seurat](https://satijalab.org/seurat/)
+- [Scanpy - single cell analysis with python](https://scanpy.readthedocs.io/en/stable/)
+- [scTransform](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1874-1)
+- [Pearson Residuals for Normalization](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02451-7)
+- [GPU - probabilistic models for single-cell omics](https://scvi-tools.org/)
+
 #### Tuesday, April 12 *Bioinformatics for bench scientists* (Guest: Lawrenson)
 
 **Lecture topics:**
 
+TBD
 
 #### Thursday, April 14 *Microbiome* (Vujkovic-Cvijin)
 
@@ -190,7 +204,7 @@ incomplete grade.
 
 **Homework Assignment :** Follow and complete the tutorial for
 [dada2](https://benjjneb.github.io/dada2/tutorial.html) prior to April
-14
+14. Please also install the following R packages: vegan, phyloseq, lmerTest, lme4, ggplot2, dplyr, ape, reshape2
 
 #### Tuesday, April 19 *Project management and Git* (Hazelett)
 
