@@ -156,7 +156,7 @@ Take some time to review the code below:
 
 # define parameters:
 ngenes <- 2e4                       # total number of genes
-cutoff <- round(ngenes / 10, 0)     # number of top ranked genes with enrichment (default here 1/5 of genes)
+cutoff <- round(ngenes / 10, 0)     # number of top ranked genes with enrichment (default here 1/10 of genes)
 pathway_genes <- 50                 # number of genes in pathway
 baseline <- pathway_genes / ngenes  # the baseline is the fraction of total genes in pathway of interest, i.e. the expect frequency with no enrichment
 enrich <- baseline * 5.5              # probability of pathway genes in top list

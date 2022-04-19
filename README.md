@@ -159,7 +159,7 @@ incomplete grade.
 
 **Homework Assignment 4:**
 
-[Due April 12](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)
+[Due April 14](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)
 
 #### Tuesday, April 5 *RNA seq analysis* (Coetzee)
 
@@ -229,7 +229,7 @@ Due April 26: Create a private git repo and populate with all prior homework ass
 | Tue | 03/22 | COETZEE         | [hw1](https://junkdnalab.github.io/hgg_2022/homework/hw1.html)   | 03/29 |
 | Thu | 03/24 | COETZEE         | [hw2](https://junkdnalab.github.io/hgg_2022/homework/hw2.html)   | 03/31 |
 | Tue | 03/29 | COETZEE         | [hw3](https://junkdnalab.github.io/hgg_2022/homework/hw3.html)   | 04/05 |
-| Thu | 03/31 | HAZELETT        | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)   | 04/12 |
+| Thu | 03/31 | HAZELETT        | [hw4](https://junkdnalab.github.io/hgg_2022/homework/hw4.html)   | 04/14 |
 | Tue | 04/05 | COETZEE         | | |
 | Thu | 04/07 | COETZEE         | | |
 | Tue | 04/12 | LAWRENSON       | | 04/21 |
