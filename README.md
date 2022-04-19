@@ -225,8 +225,10 @@ Due April 26: Create a private git repo and populate with all prior homework ass
 - Elements of machine learning analysis pipeline
 - Automated Machine Learning
 - Demonstration of AutoMLPipe-BC
-- 
+
 [Lecture 12](https://github.com/Junkdnalab/hgg_2022/blob/main/lecture%2012/Urbanowicz_2022_Automated%20Machine%20Learning%20in%20Biomedicine%20AutoMLPipe-BC_Cedars_CompGen.pdf)
+
+Pre-Lecture: Follow instructions on slides 109-111 to install AutoMLPipe-BC on your Google-Drive.
 
 ### Schedule and Due Dates:
 
