@@ -218,7 +218,7 @@ TBD
 
 Due April 26: Create a private git repo and populate with all prior homework assignments. See lecture slides.
 
-#### Thursday, April 21 *Automated Machine Learning in Biomedicine: AutoMLPipe-BC* (Urbanowicz)
+#### Thursday, April 21 (Lecture 12) *Automated Machine Learning in Biomedicine: AutoMLPipe-BC* (Urbanowicz)
 
 - What is machine learning?
 - Biomedical data challenges
